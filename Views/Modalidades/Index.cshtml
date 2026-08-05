@@ -1,0 +1,14 @@
+﻿@model List<ProjetoOlimpicos.Models.Modalidades>
+
+<h2>Modalidades Olímpicas</h2>
+
+<ul>
+    @foreach (var modalidades in Model)
+    {
+        <li>
+            <a href="/Modalidades/Criar/@modalidades.codModalidade">
+                @modalidades.nomeModalidade
+            </a>
+        </li>
+    }
+</ul>
