@@ -5,9 +5,12 @@ using ProjetoOlimpicos.Models;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
+using ProjetoOlimpicos.Filters;
 
 namespace ProjetoOlimpicos.Controllers
 {
+
+    [SessionAuthorize]  
     public class EdicaoController : Controller
     {
         private readonly Database db = new Database();
@@ -15,7 +18,7 @@ namespace ProjetoOlimpicos.Controllers
         {
             List<Edicao> edicoes = new List<Edicao>();
             using (MySqlConnection conn = db.GetConnection())
-            {
+            {   
                 string sql = "SELECT * FROM edicao";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 using (var reader = cmd.ExecuteReader())
@@ -33,6 +36,49 @@ namespace ProjetoOlimpicos.Controllers
             }
             return View(edicoes);
 
+        }
+
+
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Criar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Criar(Edicao edicao)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = @"INSERT INTO edicao (ano,sede)
+                     VALUES (@ano, @sede)";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@ano", edicao.Ano);
+                cmd.Parameters.AddWithValue("@sede", edicao.Sede);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        private List<Cidades> GetCidades()
+        {
+            List<Cidades> cidades = new List<Cidades>();
+            using (var conn = db.GetConnection())
+            {
+                var sql = "SELECT Distinct * FROM cidades order by nomeCidade";
+                var cmd = new MySqlCommand(sql, conn);
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    cidades.Add(new Cidades
+                    {
+                        CodCidade = reader.GetInt32("codCidade"),
+                        NomeCidade = reader.GetString("nomeCidade"),
+                        CodEstado = reader.GetInt32("codEstado")
+                    });
+                }
+            }
+            return cidades;
         }
 
         public IActionResult Atletas(int id)

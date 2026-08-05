@@ -17,23 +17,49 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Edicao" asp-action="Index">Edição</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Atletas" asp-action="Criar">Novo Atleta</a>
-                        </li>
+                <nav class="collapse navbar-collapse" id="topNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        @if (Context.Session.GetInt32("UserId") != null)
+                        {
+                            <!-- Usuário logado -->
+                            <span>Bem-vindo, @Context.Session.GetString("Username")!</span>
+                            
+                        }
+                        <li class="nav-item"><a class="nav-link" asp-controller="Edicao" asp-action="Index">Edições</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-controller="Atletas" asp-action="Index">Atletas</a></li>
+                        @if (Context.Session.GetInt32("UserId") != null)
+                        {
+                            <!-- Usuário logado -->
+                           
+                            <li class="nav-item"><a class="nav-link" asp-controller="Admin" asp-action="Logout">Logout</a></li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Cadastros</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" asp-controller="Modalidades" asp-action="Criar">Modalidades</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Provas" asp-action="Criar">Provas</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Estados" asp-action="Criar">Estados</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Cidades" asp-action="Criar">Cidades</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Atletas" asp-action="Criar">Cadastrar Atleta</a></li>
+                                    <li><a class="dropdown-item" asp-controller="ResultadosAtletas" asp-action="Criar">Cadastrar Resultados</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Edicao" asp-action="Criar">Cadastrar Edição</a></li>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <!-- Usuário não logado -->
+                            <li class="nav-item"><a class="nav-link" asp-controller="Admin" asp-action="Login">Login</a></li>
 
+                        }
+
+                        <li class="nav-item"><a class="nav-link" asp-controller="Admin" asp-action="NovoUsuario">Novo Usuário</a></li>
+                      
                     </ul>
-                </div>
+
+
+                </nav>
+
             </div>
         </nav>
     </header>

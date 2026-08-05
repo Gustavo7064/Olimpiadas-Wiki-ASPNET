@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "BCrypt.Net-Next/4.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/BCrypt-Net-Next.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/BCrypt-Net-Next.dll": {}
+        }
+      },
       "BouncyCastle.Cryptography/2.6.2": {
         "type": "package",
         "compile": {
@@ -72,6 +81,58 @@
           }
         }
       },
+      "Microsoft.Build.Framework/18.8.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NET.StringTools": "18.8.2",
+          "System.Memory": "4.6.3",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
+        },
+        "compile": {
+          "ref/netstandard2.0/Microsoft.Build.Framework.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp2.0/Microsoft.Build.Framework.targets": {}
+        }
+      },
+      "Microsoft.Build.Utilities.Core/18.8.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Build.Framework": "18.8.2",
+          "System.Memory": "4.6.3",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
+        },
+        "compile": {
+          "ref/netstandard2.0/Microsoft.Build.Utilities.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp2.0/Microsoft.Build.Utilities.Core.targets": {}
+        }
+      },
+      "Microsoft.NET.StringTools/18.8.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.6.3",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
+        },
+        "compile": {
+          "ref/netstandard2.0/Microsoft.NET.StringTools.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.NET.StringTools.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp2.0/Microsoft.NET.StringTools.targets": {}
+        }
+      },
       "MySql.Data/9.6.0": {
         "type": "package",
         "dependencies": {
@@ -112,6 +173,19 @@
           "runtimes/win-x64/native/krbcc64.dll": {
             "assetType": "native",
             "rid": "win-x64"
+          }
+        }
+      },
+      "NuGet.Frameworks/7.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/NuGet.Frameworks.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/NuGet.Frameworks.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -175,6 +249,27 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Memory/4.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net7.0/_._": {}
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Security.Cryptography.ProtectedData/8.0.0": {
@@ -243,6 +338,31 @@
     }
   },
   "libraries": {
+    "BCrypt.Net-Next/4.2.0": {
+      "sha512": "gwLD2KfCuwQesP17aVh4h6lpiMPEVt5Lbpndo0ej903hNUUTtyxt3ARdDjmuydBRTAUICc7OVKVbaOvc6SQYXA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.2.0.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net10.0/BCrypt-Net-Next.dll",
+        "lib/net10.0/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt-Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt-Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt-Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt-Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt-Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
+      ]
+    },
     "BouncyCastle.Cryptography/2.6.2": {
       "sha512": "7oWOcvnntmMKNzDLsdxAYqApt+AjpRpP2CShjMfIa3umZ42UQMvH0tl1qAliYPNYO6vTdcGMqnRrCPmsfzTI1w==",
       "type": "package",
@@ -349,6 +469,99 @@
         "lib/netstandard2.1/K4os.Hash.xxHash.xml"
       ]
     },
+    "Microsoft.Build.Framework/18.8.2": {
+      "sha512": "0rH2AaR+TyRhISTU3DEW1pskvOCrBa3QlHnItRqtBTExfCi14CxYNL3/COXxCfd+H40h2WB3XOYSYUlF5IFIwA==",
+      "type": "package",
+      "path": "microsoft.build.framework/18.8.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MSBuild-NuGet-Icon.png",
+        "README.md",
+        "buildTransitive/net10.0/_._",
+        "buildTransitive/net461/Microsoft.Build.Framework.targets",
+        "buildTransitive/net472/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Build.Framework.targets",
+        "lib/net10.0/Microsoft.Build.Framework.dll",
+        "lib/net10.0/Microsoft.Build.Framework.pdb",
+        "lib/net10.0/Microsoft.Build.Framework.xml",
+        "lib/net472/Microsoft.Build.Framework.dll",
+        "lib/net472/Microsoft.Build.Framework.pdb",
+        "lib/net472/Microsoft.Build.Framework.xml",
+        "microsoft.build.framework.18.8.2.nupkg.sha512",
+        "microsoft.build.framework.nuspec",
+        "notices/THIRDPARTYNOTICES.txt",
+        "ref/net10.0/Microsoft.Build.Framework.dll",
+        "ref/net10.0/Microsoft.Build.Framework.xml",
+        "ref/net472/Microsoft.Build.Framework.dll",
+        "ref/net472/Microsoft.Build.Framework.xml",
+        "ref/netstandard2.0/Microsoft.Build.Framework.dll",
+        "ref/netstandard2.0/Microsoft.Build.Framework.xml",
+        "tools/net472/Microsoft.Build.Framework.tlb"
+      ]
+    },
+    "Microsoft.Build.Utilities.Core/18.8.2": {
+      "sha512": "C3gjkM3Xmup6OYbU1DQ9e92tLwg/uUaS82NzJi36lW8J0g+bP/xgyT4oRbmKUWiOm+LaD1C8AUN4yVMvFrCAZQ==",
+      "type": "package",
+      "path": "microsoft.build.utilities.core/18.8.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MSBuild-NuGet-Icon.png",
+        "README.md",
+        "buildTransitive/net10.0/_._",
+        "buildTransitive/net461/Microsoft.Build.Utilities.Core.targets",
+        "buildTransitive/net472/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Build.Utilities.Core.targets",
+        "lib/net10.0/Microsoft.Build.Utilities.Core.dll",
+        "lib/net10.0/Microsoft.Build.Utilities.Core.pdb",
+        "lib/net10.0/Microsoft.Build.Utilities.Core.xml",
+        "lib/net472/Microsoft.Build.Utilities.Core.dll",
+        "lib/net472/Microsoft.Build.Utilities.Core.pdb",
+        "lib/net472/Microsoft.Build.Utilities.Core.xml",
+        "microsoft.build.utilities.core.18.8.2.nupkg.sha512",
+        "microsoft.build.utilities.core.nuspec",
+        "notices/THIRDPARTYNOTICES.txt",
+        "ref/net10.0/Microsoft.Build.Utilities.Core.dll",
+        "ref/net10.0/Microsoft.Build.Utilities.Core.xml",
+        "ref/net472/Microsoft.Build.Utilities.Core.dll",
+        "ref/net472/Microsoft.Build.Utilities.Core.xml",
+        "ref/netstandard2.0/Microsoft.Build.Utilities.Core.dll",
+        "ref/netstandard2.0/Microsoft.Build.Utilities.Core.xml"
+      ]
+    },
+    "Microsoft.NET.StringTools/18.8.2": {
+      "sha512": "TWyg687GoiC9dhj85CagUfYFKYtxRX2jv5raO+zolLVmvKIS1k5WXYh8IMvyiPP5f9r9/snpmTZioyCO5zh+ww==",
+      "type": "package",
+      "path": "microsoft.net.stringtools/18.8.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "MSBuild-NuGet-Icon.png",
+        "README.md",
+        "buildTransitive/net10.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.NET.StringTools.targets",
+        "lib/net10.0/Microsoft.NET.StringTools.dll",
+        "lib/net10.0/Microsoft.NET.StringTools.pdb",
+        "lib/net10.0/Microsoft.NET.StringTools.xml",
+        "lib/net472/Microsoft.NET.StringTools.dll",
+        "lib/net472/Microsoft.NET.StringTools.pdb",
+        "lib/net472/Microsoft.NET.StringTools.xml",
+        "lib/netstandard2.0/Microsoft.NET.StringTools.dll",
+        "lib/netstandard2.0/Microsoft.NET.StringTools.pdb",
+        "lib/netstandard2.0/Microsoft.NET.StringTools.xml",
+        "microsoft.net.stringtools.18.8.2.nupkg.sha512",
+        "microsoft.net.stringtools.nuspec",
+        "notices/THIRDPARTYNOTICES.txt",
+        "ref/net10.0/Microsoft.NET.StringTools.dll",
+        "ref/net10.0/Microsoft.NET.StringTools.xml",
+        "ref/net472/Microsoft.NET.StringTools.dll",
+        "ref/net472/Microsoft.NET.StringTools.xml",
+        "ref/netstandard2.0/Microsoft.NET.StringTools.dll",
+        "ref/netstandard2.0/Microsoft.NET.StringTools.xml"
+      ]
+    },
     "MySql.Data/9.6.0": {
       "sha512": "jjCXNBxLLQHBcyYyOP4yp5jqljStH2qGFXXg3jBMdwYQk9ihpLH9BXoMyc/J3421pENBDjCf/eGi9Ow0Ib7LUA==",
       "type": "package",
@@ -381,6 +594,23 @@
         "runtimes/win-x64/native/k5sprt64.dll",
         "runtimes/win-x64/native/krb5_64.dll",
         "runtimes/win-x64/native/krbcc64.dll"
+      ]
+    },
+    "NuGet.Frameworks/7.6.0": {
+      "sha512": "rJ7QtKN45XzLXCrMATve6eFLiUyUGEkA1rFSb6U6Fw6laM4hEAcKOrcdbgWlcFUlCK2158qP1LF00hg/ivF3nw==",
+      "type": "package",
+      "path": "nuget.frameworks/7.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net472/NuGet.Frameworks.dll",
+        "lib/net472/NuGet.Frameworks.xml",
+        "lib/net8.0/NuGet.Frameworks.dll",
+        "lib/net8.0/NuGet.Frameworks.xml",
+        "nuget.frameworks.7.6.0.nupkg.sha512",
+        "nuget.frameworks.nuspec"
       ]
     },
     "System.Configuration.ConfigurationManager/8.0.0": {
@@ -475,6 +705,51 @@
         "system.io.pipelines.6.0.3.nupkg.sha512",
         "system.io.pipelines.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Memory/4.6.3": {
+      "sha512": "qdcDOgnFZY40+Q9876JUHnlHu7bosOHX8XISRoH94fwk6hgaeQGSgfZd8srWRZNt5bV9ZW2TljcegDNxsf+96A==",
+      "type": "package",
+      "path": "system.memory/4.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Memory.targets",
+        "buildTransitive/net462/_._",
+        "lib/net462/System.Memory.dll",
+        "lib/net462/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "lib/netstandard2.1/_._",
+        "system.memory.4.6.3.nupkg.sha512",
+        "system.memory.nuspec"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.1.2": {
+      "sha512": "2hBr6zdbIBTDE3EhK7NSVNdX58uTK6iHW/P/Axmm9sl1xoGSLqDvMtpecn226TNwHByFokYwJmt/aQQNlO5CRw==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "lib/net462/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net462/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net7.0/_._",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.1.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec"
       ]
     },
     "System.Security.Cryptography.ProtectedData/8.0.0": {
@@ -592,27 +867,30 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "MySql.Data >= 9.6.0"
+      "BCrypt.Net-Next >= 4.2.0",
+      "Microsoft.Build.Utilities.Core >= 18.8.2",
+      "MySql.Data >= 9.6.0",
+      "NuGet.Frameworks >= 7.6.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\3bmod\\.nuget\\packages\\": {},
+    "C:\\Users\\joyce\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\3bmod\\Desktop\\JueGu-20260317T165849Z-1-001\\JueGu\\ProjetoOlimpicos\\ProjetoOlimpicos\\ProjetoOlimpicos.csproj",
+      "projectUniqueName": "C:\\Users\\joyce\\OneDrive\\Área de Trabalho\\diasetedeabri-20260805T033723Z-1-001\\diasetedeabri\\atualizadosportwiki\\arq\\JueGu\\ProjetoOlimpicos\\ProjetoOlimpicos\\ProjetoOlimpicos.csproj",
       "projectName": "ProjetoOlimpicos",
-      "projectPath": "C:\\Users\\3bmod\\Desktop\\JueGu-20260317T165849Z-1-001\\JueGu\\ProjetoOlimpicos\\ProjetoOlimpicos\\ProjetoOlimpicos.csproj",
-      "packagesPath": "C:\\Users\\3bmod\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\3bmod\\Desktop\\JueGu-20260317T165849Z-1-001\\JueGu\\ProjetoOlimpicos\\ProjetoOlimpicos\\obj\\",
+      "projectPath": "C:\\Users\\joyce\\OneDrive\\Área de Trabalho\\diasetedeabri-20260805T033723Z-1-001\\diasetedeabri\\atualizadosportwiki\\arq\\JueGu\\ProjetoOlimpicos\\ProjetoOlimpicos\\ProjetoOlimpicos.csproj",
+      "packagesPath": "C:\\Users\\joyce\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joyce\\OneDrive\\Área de Trabalho\\diasetedeabri-20260805T033723Z-1-001\\diasetedeabri\\atualizadosportwiki\\arq\\JueGu\\ProjetoOlimpicos\\ProjetoOlimpicos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\3bmod\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joyce\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -621,7 +899,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -640,15 +917,27 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "BCrypt.Net-Next": {
+            "target": "Package",
+            "version": "[4.2.0, )"
+          },
+          "Microsoft.Build.Utilities.Core": {
+            "target": "Package",
+            "version": "[18.8.2, )"
+          },
           "MySql.Data": {
             "target": "Package",
             "version": "[9.6.0, )"
+          },
+          "NuGet.Frameworks": {
+            "target": "Package",
+            "version": "[7.6.0, )"
           }
         },
         "imports": [
@@ -670,7 +959,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.316/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

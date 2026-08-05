@@ -2,17 +2,67 @@
 using MySql.Data.MySqlClient;
 using ProjetoOlimpicos.Data;
 using ProjetoOlimpicos.Models;
+using ProjetoOlimpicos.Filters;
 
 namespace ProjetoOlimpicos.Controllers
 {
+    [SessionAuthorize]
     public class AtletasController : Controller
     {
         private readonly Database db = new Database();
+       
+        
         public IActionResult Index()
         {
-            return View();
-        }
+            List<Atletas> at = new List<Atletas>();
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                string sql = "SELECT * FROM atletas";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        at.Add(new Atletas
+                        {
+                            CodAtleta = reader.IsDBNull(reader.GetOrdinal("CodAtleta"))
+                                ? 0
+                                : reader.GetInt32(reader.GetOrdinal("CodAtleta")),
 
+                            NomeAtleta = reader.IsDBNull(reader.GetOrdinal("nomeAtleta"))
+                                ? null
+                                : reader.GetString(reader.GetOrdinal("nomeAtleta")),
+
+                            DataNascimento = reader.IsDBNull(reader.GetOrdinal("dataNascimento"))
+                                ? null
+                                : reader.GetString(reader.GetOrdinal("dataNascimento")),
+
+                            Sexo = reader.IsDBNull(reader.GetOrdinal("sexo"))
+                                ? ' '
+                                : reader.GetChar(reader.GetOrdinal("sexo")),
+
+                            Altura = reader.IsDBNull(reader.GetOrdinal("altura"))
+                                ? null
+                                : reader.GetDecimal(reader.GetOrdinal("altura")),
+
+                            Peso = reader.IsDBNull(reader.GetOrdinal("peso"))
+                                ? null
+                                : reader.GetDecimal(reader.GetOrdinal("peso")),
+
+                            CodCidade = reader.IsDBNull(reader.GetOrdinal("codCidade"))
+                                ? 0
+                                : reader.GetInt32(reader.GetOrdinal("codCidade"))
+                        });
+                    }
+                }
+                    return View(at);
+                }
+            }
+
+
+
+
+        [SessionAuthorize(RoleAnyOf ="Admin,Gerente")]
         public IActionResult Criar()
         {
             ViewBag.Cidades = GetCidades(); // Para dropdown

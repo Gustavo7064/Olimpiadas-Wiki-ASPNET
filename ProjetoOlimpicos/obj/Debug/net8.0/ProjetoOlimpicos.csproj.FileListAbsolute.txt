@@ -103,3 +103,384 @@ C:\Users\3bmod\Desktop\JueGu-20260317T165849Z-1-001\JueGu\ProjetoOlimpicos\Proje
 C:\Users\3bmod\Desktop\JueGu-20260317T165849Z-1-001\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.pdb
 C:\Users\3bmod\Desktop\JueGu-20260317T165849Z-1-001\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.genruntimeconfig.cache
 C:\Users\3bmod\Desktop\JueGu-20260317T165849Z-1-001\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ref\ProjetoOlimpicos.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.runtime.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.endpoints.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.exe
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.deps.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.runtimeconfig.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.AssemblyReference.cache
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfoInputs.cache
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfo.cs
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.CoreCompileInputs.cache
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cache
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cs
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.sourcelink.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\bundle\ProjetoOlimpicos.styles.css
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\projectbundle\ProjetoOlimpicos.bundle.scp.css
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.build.ProjetoOlimpicos.props
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ProjetoOlimpicos.props
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ProjetoOlimpicos.props
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoO.11B8BC2E.Up2Date
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\refint\ProjetoOlimpicos.dll
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.genruntimeconfig.cache
+C:\Users\3amod\Desktop\kuuu-20260318T164759Z-1-001\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ref\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.AssemblyReference.cache
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfoInputs.cache
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfo.cs
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.CoreCompileInputs.cache
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cache
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cs
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.sourcelink.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\refint\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.runtime.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.endpoints.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.exe
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.deps.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.runtimeconfig.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\bundle\ProjetoOlimpicos.styles.css
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\projectbundle\ProjetoOlimpicos.bundle.scp.css
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.build.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoO.11B8BC2E.Up2Date
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.genruntimeconfig.cache
+C:\Users\3bmod\Desktop\atualizadosportwiki-20260324T163114Z-1-001\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ref\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.endpoints.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.runtime.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.exe
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.deps.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.runtimeconfig.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.AssemblyReference.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfoInputs.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfo.cs
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.CoreCompileInputs.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cs
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.sourcelink.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\bundle\ProjetoOlimpicos.styles.css
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\projectbundle\ProjetoOlimpicos.bundle.scp.css
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.build.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoO.11B8BC2E.Up2Date
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\refint\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.genruntimeconfig.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ref\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.endpoints.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.runtime.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.exe
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.deps.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.runtimeconfig.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.AssemblyReference.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfoInputs.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfo.cs
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.CoreCompileInputs.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cs
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.sourcelink.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\bundle\ProjetoOlimpicos.styles.css
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\projectbundle\ProjetoOlimpicos.bundle.scp.css
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.build.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoO.11B8BC2E.Up2Date
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\refint\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.genruntimeconfig.cache
+C:\Users\3bmod\Desktop\diavintequatrodotres22\atualizadosportwiki\kuuu\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ref\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.endpoints.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.runtime.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.exe
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.deps.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.runtimeconfig.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.AssemblyReference.cache
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfoInputs.cache
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfo.cs
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.CoreCompileInputs.cache
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cache
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cs
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.sourcelink.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\bundle\ProjetoOlimpicos.styles.css
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\projectbundle\ProjetoOlimpicos.bundle.scp.css
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.build.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoO.11B8BC2E.Up2Date
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\refint\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.genruntimeconfig.cache
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ref\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diavinteecinco\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.endpoints.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.runtime.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.exe
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.deps.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.runtimeconfig.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.AssemblyReference.cache
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfoInputs.cache
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfo.cs
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.CoreCompileInputs.cache
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cache
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cs
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.sourcelink.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\bundle\ProjetoOlimpicos.styles.css
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\projectbundle\ProjetoOlimpicos.bundle.scp.css
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.ProjetoOlimpicos.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.build.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ProjetoOlimpicos.props
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoO.11B8BC2E.Up2Date
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\refint\ProjetoOlimpicos.dll
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.genruntimeconfig.cache
+C:\Users\3bmod\Desktop\diadamentiratrabaio\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ref\ProjetoOlimpicos.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\appsettings.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.runtime.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.staticwebassets.endpoints.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.exe
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.deps.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.runtimeconfig.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\BCrypt-Net-Next.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\K4os.Hash.xxHash.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\MySql.Data.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\NuGet.Frameworks.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.AssemblyReference.cache
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfoInputs.cache
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.AssemblyInfo.cs
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.csproj.CoreCompileInputs.cache
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cache
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.RazorAssemblyInfo.cs
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.sourcelink.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\bundle\ProjetoOlimpicos.styles.css
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\scopedcss\projectbundle\ProjetoOlimpicos.bundle.scp.css
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoO.11B8BC2E.Up2Date
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\refint\ProjetoOlimpicos.dll
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.pdb
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ProjetoOlimpicos.genruntimeconfig.cache
+C:\Users\joyce\OneDrive\Área de Trabalho\diasetedeabri-20260805T033723Z-1-001\diasetedeabri\atualizadosportwiki\arq\JueGu\ProjetoOlimpicos\ProjetoOlimpicos\obj\Debug\net8.0\ref\ProjetoOlimpicos.dll

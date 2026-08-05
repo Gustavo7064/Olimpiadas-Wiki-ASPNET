@@ -1,0 +1,14 @@
+﻿@model List<ProjetoOlimpicos.Models.Cidades>
+
+<h2>Cidades</h2>
+
+<ul>
+    @foreach (var cidades in Model)
+    {
+        <li>
+            <a href="/Cidades/Criar/@cidades.CodCidade">
+                @cidades.NomeCidade - @cidades.CodEstado
+            </a>
+        </li>
+    }
+</ul>

@@ -8,10 +8,21 @@
     ".NETCoreApp,Version=v8.0": {
       "ProjetoOlimpicos/1.0.0": {
         "dependencies": {
-          "MySql.Data": "9.6.0"
+          "BCrypt.Net-Next": "4.2.0",
+          "Microsoft.Build.Utilities.Core": "18.8.2",
+          "MySql.Data": "9.6.0",
+          "NuGet.Frameworks": "7.6.0"
         },
         "runtime": {
           "ProjetoOlimpicos.dll": {}
+        }
+      },
+      "BCrypt.Net-Next/4.2.0": {
+        "runtime": {
+          "lib/netstandard2.1/BCrypt-Net-Next.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
         }
       },
       "BouncyCastle.Cryptography/2.6.2": {
@@ -59,6 +70,32 @@
           }
         }
       },
+      "Microsoft.Build.Framework/18.8.2": {
+        "dependencies": {
+          "Microsoft.NET.StringTools": "18.8.2",
+          "System.Memory": "4.6.3",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
+        }
+      },
+      "Microsoft.Build.Utilities.Core/18.8.2": {
+        "dependencies": {
+          "Microsoft.Build.Framework": "18.8.2",
+          "System.Memory": "4.6.3",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
+        }
+      },
+      "Microsoft.NET.StringTools/18.8.2": {
+        "dependencies": {
+          "System.Memory": "4.6.3",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.NET.StringTools.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "18.8.2.30814"
+          }
+        }
+      },
       "MySql.Data/9.6.0": {
         "dependencies": {
           "BouncyCastle.Cryptography": "2.6.2",
@@ -102,6 +139,14 @@
           }
         }
       },
+      "NuGet.Frameworks/7.6.0": {
+        "runtime": {
+          "lib/net8.0/NuGet.Frameworks.dll": {
+            "assemblyVersion": "7.6.0.0",
+            "fileVersion": "7.6.0.59"
+          }
+        }
+      },
       "System.Configuration.ConfigurationManager/8.0.0": {
         "dependencies": {
           "System.Diagnostics.EventLog": "8.0.0",
@@ -116,6 +161,8 @@
       },
       "System.Diagnostics.EventLog/8.0.0": {},
       "System.IO.Pipelines/6.0.3": {},
+      "System.Memory/4.6.3": {},
+      "System.Runtime.CompilerServices.Unsafe/6.1.2": {},
       "System.Security.Cryptography.ProtectedData/8.0.0": {
         "runtime": {
           "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
@@ -167,6 +214,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BCrypt.Net-Next/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gwLD2KfCuwQesP17aVh4h6lpiMPEVt5Lbpndo0ej903hNUUTtyxt3ARdDjmuydBRTAUICc7OVKVbaOvc6SQYXA==",
+      "path": "bcrypt.net-next/4.2.0",
+      "hashPath": "bcrypt.net-next.4.2.0.nupkg.sha512"
+    },
     "BouncyCastle.Cryptography/2.6.2": {
       "type": "package",
       "serviceable": true,
@@ -202,12 +256,40 @@
       "path": "k4os.hash.xxhash/1.0.8",
       "hashPath": "k4os.hash.xxhash.1.0.8.nupkg.sha512"
     },
+    "Microsoft.Build.Framework/18.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0rH2AaR+TyRhISTU3DEW1pskvOCrBa3QlHnItRqtBTExfCi14CxYNL3/COXxCfd+H40h2WB3XOYSYUlF5IFIwA==",
+      "path": "microsoft.build.framework/18.8.2",
+      "hashPath": "microsoft.build.framework.18.8.2.nupkg.sha512"
+    },
+    "Microsoft.Build.Utilities.Core/18.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C3gjkM3Xmup6OYbU1DQ9e92tLwg/uUaS82NzJi36lW8J0g+bP/xgyT4oRbmKUWiOm+LaD1C8AUN4yVMvFrCAZQ==",
+      "path": "microsoft.build.utilities.core/18.8.2",
+      "hashPath": "microsoft.build.utilities.core.18.8.2.nupkg.sha512"
+    },
+    "Microsoft.NET.StringTools/18.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TWyg687GoiC9dhj85CagUfYFKYtxRX2jv5raO+zolLVmvKIS1k5WXYh8IMvyiPP5f9r9/snpmTZioyCO5zh+ww==",
+      "path": "microsoft.net.stringtools/18.8.2",
+      "hashPath": "microsoft.net.stringtools.18.8.2.nupkg.sha512"
+    },
     "MySql.Data/9.6.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-jjCXNBxLLQHBcyYyOP4yp5jqljStH2qGFXXg3jBMdwYQk9ihpLH9BXoMyc/J3421pENBDjCf/eGi9Ow0Ib7LUA==",
       "path": "mysql.data/9.6.0",
       "hashPath": "mysql.data.9.6.0.nupkg.sha512"
+    },
+    "NuGet.Frameworks/7.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rJ7QtKN45XzLXCrMATve6eFLiUyUGEkA1rFSb6U6Fw6laM4hEAcKOrcdbgWlcFUlCK2158qP1LF00hg/ivF3nw==",
+      "path": "nuget.frameworks/7.6.0",
+      "hashPath": "nuget.frameworks.7.6.0.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/8.0.0": {
       "type": "package",
@@ -229,6 +311,20 @@
       "sha512": "sha512-ryTgF+iFkpGZY1vRQhfCzX0xTdlV3pyaTTqRu2ETbEv+HlV7O6y7hyQURnghNIXvctl5DuZ//Dpks6HdL/Txgw==",
       "path": "system.io.pipelines/6.0.3",
       "hashPath": "system.io.pipelines.6.0.3.nupkg.sha512"
+    },
+    "System.Memory/4.6.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qdcDOgnFZY40+Q9876JUHnlHu7bosOHX8XISRoH94fwk6hgaeQGSgfZd8srWRZNt5bV9ZW2TljcegDNxsf+96A==",
+      "path": "system.memory/4.6.3",
+      "hashPath": "system.memory.4.6.3.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2hBr6zdbIBTDE3EhK7NSVNdX58uTK6iHW/P/Axmm9sl1xoGSLqDvMtpecn226TNwHByFokYwJmt/aQQNlO5CRw==",
+      "path": "system.runtime.compilerservices.unsafe/6.1.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.1.2.nupkg.sha512"
     },
     "System.Security.Cryptography.ProtectedData/8.0.0": {
       "type": "package",

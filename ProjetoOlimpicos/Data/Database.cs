@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using BCrypt.Net;
+
 
 namespace ProjetoOlimpicos.Data
 {
@@ -12,6 +14,5 @@ namespace ProjetoOlimpicos.Data
             conn.Open();
             return conn;
         }
-
     }
 }
