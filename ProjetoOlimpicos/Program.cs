@@ -31,12 +31,16 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+//aaaaaaaaaaaaaaaa
+
 
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// aaaaaaaaa
 
 
 // Sessão do usuário
