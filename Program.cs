@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -58,3 +59,8 @@ app.MapControllerRoute(
 
 
 app.Run();
+=======
+using BCrypt.Net;
+
+Console.WriteLine(BCrypt.Net.BCrypt.HashPassword("admin123"));
+>>>>>>> 0dd83342cbcbab64769568456647630deb936b34

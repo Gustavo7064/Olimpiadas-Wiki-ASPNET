@@ -1,0 +1,86 @@
+﻿    @model ProjetoOlimpicos.Models.Provas
+    @{
+        ViewBag.Title = "Cadastro de Provas";
+    }
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f4f4f9;
+                margin: 0;
+                padding: 0;
+            }
+
+            .form-container {
+                width: 500px;
+                margin: 50px auto;
+                background: #ffffff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            label {
+                display: block;
+                margin-top: 10px;
+                color: #444;
+            }
+
+            input[type="text"],
+            input[type="number"],
+            input[type="date"],
+            select {
+                width: 100%;
+                padding: 10px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+            button {
+                margin-top: 20px;
+                width: 100%;
+                padding: 12px;
+                background-color: #4CAF50;
+                color: white;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+                button:hover {
+                    background-color: #45a049;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <h2>Cadastrar Provas</h2>
+
+            <form asp-action="Criar" method="post">
+                <label>Nome:</label>
+                <input asp-for="prova" type="text" required />
+
+                <label>Modalidade:</label>
+                <select asp-for="codModalidade" asp-items="@(new SelectList(ViewBag.Modalidades, "codModalidade", "nomeModalidade"))" required>
+                    <option value="">Selecione a modalidade</option>
+                </select>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </body>
+    </html>
