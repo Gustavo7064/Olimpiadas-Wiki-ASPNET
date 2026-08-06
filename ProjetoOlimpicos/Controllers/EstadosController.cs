@@ -6,6 +6,7 @@ using ProjetoOlimpicos.Models;
 
 namespace ProjetoOlimpicos.Controllers
 {
+    [SessionAuthorize]
     public class EstadosController : Controller
     {
 
@@ -43,6 +44,7 @@ namespace ProjetoOlimpicos.Controllers
 
 
         [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(Estados estado)
         {
             using (var conn = db.GetConnection())
@@ -51,6 +53,59 @@ namespace ProjetoOlimpicos.Controllers
                      VALUES (@nomeEstado)";
                 var cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@nomeEstado", estado.NomeEstado);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(int id)
+        {
+            Estados est = null;
+            using (var conn = db.GetConnection())
+            {
+                var sql = "SELECT * FROM estados WHERE codEstado = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        est = new Estados
+                        {
+                            CodEstado = reader.GetInt32("codEstado"),
+                            NomeEstado = reader.GetString("nomeEstado")
+                        };
+                    }
+                }
+            }
+            if (est == null) return NotFound();
+            return View(est);
+        }
+
+        [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(Estados est)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "UPDATE estados SET nomeEstado=@nome WHERE codEstado=@id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@nome", est.NomeEstado);
+                cmd.Parameters.AddWithValue("@id", est.CodEstado);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [SessionAuthorize(RoleAnyOf = "Admin")]
+        public IActionResult Excluir(int id)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "DELETE FROM estados WHERE codEstado = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
             }
             return RedirectToAction("Index");

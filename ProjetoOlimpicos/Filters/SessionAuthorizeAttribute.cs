@@ -15,11 +15,11 @@ namespace ProjetoOlimpicos.Filters
     {
         public string? RoleAnyOf { get; set; }
 
-        public string LoginController { get; set; } = "AdminController1";
+        public string LoginController { get; set; } = "Admin";
         public string LoginAction { get; set; } = "Login";
 
 
-        public string AccessDeniedController { get; set; } = "AdminController1";
+        public string AccessDeniedController { get; set; } = "Admin";
         public string AccessDeniedAction { get; set; } = "AcessoNegado";
 
         public override void OnActionExecuting(ActionExecutingContext context)

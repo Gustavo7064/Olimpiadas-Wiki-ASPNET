@@ -6,6 +6,7 @@ using ProjetoOlimpicos.Models;
 
 namespace ProjetoOlimpicos.Controllers
 {
+    [SessionAuthorize]
     public class ModalidadesController : Controller
     {
         private readonly Database db = new Database();
@@ -42,6 +43,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(Modalidades modalidade)
         {
             using (var conn = db.GetConnection())
@@ -50,6 +52,59 @@ namespace ProjetoOlimpicos.Controllers
                      VALUES (@nomeModalidade)";
                 var cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@nomeModalidade", modalidade.nomeModalidade);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(int id)
+        {
+            Modalidades mod = null;
+            using (var conn = db.GetConnection())
+            {
+                var sql = "SELECT * FROM modalidades WHERE codModalidade = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        mod = new Modalidades
+                        {
+                            codModalidade = reader.GetInt32("codModalidade"),
+                            nomeModalidade = reader.GetString("nomeModalidade")
+                        };
+                    }
+                }
+            }
+            if (mod == null) return NotFound();
+            return View(mod);
+        }
+
+        [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(Modalidades mod)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "UPDATE modalidades SET nomeModalidade=@nome WHERE codModalidade=@id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@nome", mod.nomeModalidade);
+                cmd.Parameters.AddWithValue("@id", mod.codModalidade);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [SessionAuthorize(RoleAnyOf = "Admin")]
+        public IActionResult Excluir(int id)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "DELETE FROM modalidades WHERE codModalidade = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
             }
             return RedirectToAction("Index");

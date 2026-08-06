@@ -1,0 +1,615 @@
+/* ============================================================================
+   OLYMPIC EDITORIAL REBIRTH - LAYOUT ESPECÍFICO
+   Header, Footer, Navegação e Componentes Editoriais
+   ============================================================================ */
+
+/* ============================================================================
+   1. HEADER / NAVEGAÇÃO PRINCIPAL
+   ============================================================================ */
+
+.header-editorial {
+  background-color: var(--color-white-galactic);
+  border-bottom: 1px solid var(--color-gray-admin);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.navbar-editorial {
+  padding: var(--spacing-lg) 0;
+}
+
+.navbar-editorial .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2xl);
+}
+
+/* Logo / Branding */
+.navbar-brand {
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-black-editorial);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.brand-logo:hover {
+  color: var(--color-blue-abyssal);
+}
+
+.brand-icon {
+  font-size: 1.5em;
+}
+
+.brand-text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .brand-text {
+    display: inline;
+  }
+}
+
+/* Navegação Central */
+.navbar-menu {
+  display: flex;
+  gap: var(--spacing-xl);
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-menu .nav-link {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-black-editorial);
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+.navbar-menu .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-blue-abyssal);
+  transition: width var(--transition-base);
+}
+
+.navbar-menu .nav-link:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+
+/* Navegação de Usuário */
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex-shrink: 0;
+}
+
+.user-greeting {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-metadata);
+}
+
+.user-greeting strong {
+  color: var(--color-black-editorial);
+  font-weight: var(--font-weight-bold);
+}
+
+@media (min-width: 768px) {
+  .user-greeting {
+    display: flex;
+  }
+}
+
+/* Dropdown Menu */
+.nav-dropdown {
+  position: relative;
+}
+
+.btn-dropdown {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: none;
+  border: 1px solid var(--color-gray-admin);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-black-editorial);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border-radius: var(--radius-sm);
+}
+
+.btn-dropdown:hover {
+  border-color: var(--color-blue-abyssal);
+  color: var(--color-blue-abyssal);
+}
+
+.icon-dropdown {
+  display: inline-block;
+  transition: transform var(--transition-base);
+}
+
+.btn-dropdown[aria-expanded="true"] .icon-dropdown {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--color-white-galactic);
+  border: 1px solid var(--color-gray-admin);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-sm);
+  min-width: 200px;
+  list-style: none;
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-dropdown);
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid var(--color-gray-admin);
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-black-editorial);
+  transition: background-color var(--transition-base);
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--color-gray-snow);
+  border-bottom: none;
+}
+
+/* ============================================================================
+   2. CONTEÚDO PRINCIPAL
+   ============================================================================ */
+
+.main-content {
+  padding: var(--spacing-3xl) 0;
+  flex: 1;
+}
+
+/* ============================================================================
+   3. FOOTER
+   ============================================================================ */
+
+.footer-editorial {
+  border-top: 1px solid var(--color-gray-admin);
+  background-color: var(--color-white-galactic);
+  padding: var(--spacing-2xl) 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-metadata);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.footer-links a {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-metadata);
+}
+
+.footer-links a:hover {
+  color: var(--color-blue-abyssal);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+/* ============================================================================
+   4. COMPONENTES EDITORIAIS - CARDS E BLOCOS
+   ============================================================================ */
+
+.editorial-card {
+  background-color: var(--color-white-galactic);
+  border: 1px solid var(--color-gray-admin);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-base);
+}
+
+.editorial-card:hover {
+  border-color: var(--color-blue-abyssal);
+  box-shadow: var(--shadow-md);
+}
+
+.editorial-card-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-black-editorial);
+  margin-bottom: var(--spacing-md);
+}
+
+.editorial-card-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.editorial-card-meta .badge {
+  font-size: var(--font-size-xs);
+}
+
+.editorial-card-content {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-black-editorial);
+  margin-bottom: var(--spacing-md);
+}
+
+.editorial-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-gray-admin);
+}
+
+/* ============================================================================
+   5. COMPONENTES EDITORIAIS - LISTAS
+   ============================================================================ */
+
+.editorial-list {
+  list-style: none;
+}
+
+.editorial-list-item {
+  padding: var(--spacing-lg) 0;
+  border-bottom: 1px solid var(--color-gray-admin);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+}
+
+.editorial-list-item:last-child {
+  border-bottom: none;
+}
+
+.editorial-list-item-main {
+  flex: 1;
+}
+
+.editorial-list-item-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-black-editorial);
+  margin-bottom: var(--spacing-sm);
+}
+
+.editorial-list-item-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-sm);
+}
+
+.editorial-list-item-meta .text-metadata {
+  font-size: var(--font-size-xs);
+}
+
+.editorial-list-item-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-metadata);
+  line-height: var(--line-height-normal);
+}
+
+.editorial-list-item-action {
+  flex-shrink: 0;
+}
+
+/* ============================================================================
+   6. COMPONENTES EDITORIAIS - TABELAS TRANSFORMADAS
+   ============================================================================ */
+
+.editorial-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-lg) 0;
+}
+
+.editorial-table thead {
+  background-color: var(--color-gray-snow);
+  border-bottom: 2px solid var(--color-gray-admin);
+}
+
+.editorial-table th {
+  padding: var(--spacing-md);
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-black-editorial);
+}
+
+.editorial-table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-gray-admin);
+  font-size: var(--font-size-base);
+  color: var(--color-black-editorial);
+}
+
+.editorial-table tbody tr:hover {
+  background-color: var(--color-gray-snow);
+}
+
+/* ============================================================================
+   7. COMPONENTES EDITORIAIS - HERO / CONTENT BLEEDING
+   ============================================================================ */
+
+.editorial-hero {
+  position: relative;
+  margin: calc(-1 * var(--spacing-3xl)) 0 var(--spacing-3xl) 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.editorial-hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.editorial-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+}
+
+.editorial-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-2xl);
+  color: var(--color-white-galactic);
+}
+
+.editorial-hero-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-white-galactic);
+  margin-bottom: var(--spacing-md);
+}
+
+.editorial-hero-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+/* ============================================================================
+   8. COMPONENTES EDITORIAIS - QUICK FACTS / INSIGHTS
+   ============================================================================ */
+
+.quick-fact {
+  padding: var(--spacing-lg);
+  background-color: var(--color-gray-snow);
+  border-left: 3px solid var(--color-blue-abyssal);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.quick-fact-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-gray-metadata);
+  margin-bottom: var(--spacing-sm);
+}
+
+.quick-fact-value {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-black);
+  color: var(--color-black-editorial);
+}
+
+.quick-fact-unit {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-metadata);
+  font-weight: var(--font-weight-regular);
+}
+
+/* ============================================================================
+   9. COMPONENTES EDITORIAIS - RANKINGS
+   ============================================================================ */
+
+.ranking-list {
+  list-style: none;
+}
+
+.ranking-item {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
+  border-bottom: 1px solid var(--color-gray-admin);
+  align-items: flex-start;
+}
+
+.ranking-item:last-child {
+  border-bottom: none;
+}
+
+.ranking-position {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-gray-snow);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-black);
+  color: var(--color-black-editorial);
+}
+
+.ranking-item:nth-child(1) .ranking-position {
+  background-color: var(--color-gold-medal);
+  color: var(--color-black-editorial);
+}
+
+.ranking-item:nth-child(2) .ranking-position {
+  background-color: #c0c0c0;
+  color: var(--color-black-editorial);
+}
+
+.ranking-item:nth-child(3) .ranking-position {
+  background-color: #cd7f32;
+  color: var(--color-white-galactic);
+}
+
+.ranking-content {
+  flex: 1;
+}
+
+.ranking-name {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-black-editorial);
+  margin-bottom: var(--spacing-sm);
+}
+
+.ranking-meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-metadata);
+}
+
+.ranking-value {
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-black);
+  color: var(--color-blue-abyssal);
+}
+
+/* ============================================================================
+   10. RESPONSIVIDADE
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .header-editorial {
+    padding: var(--spacing-md) 0;
+  }
+
+  .navbar-editorial .container-fluid {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .navbar-user {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .editorial-hero-image {
+    height: 250px;
+  }
+
+  .editorial-hero-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .editorial-card {
+    padding: var(--spacing-md);
+  }
+
+  .editorial-list-item {
+    flex-direction: column;
+  }
+
+  .ranking-position {
+    width: 32px;
+    height: 32px;
+    font-size: var(--font-size-base);
+  }
+}

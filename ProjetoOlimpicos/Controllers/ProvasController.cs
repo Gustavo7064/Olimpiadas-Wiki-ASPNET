@@ -6,6 +6,7 @@ using ProjetoOlimpicos.Models;
 
 namespace ProjetoOlimpicos.Controllers
 {
+    [SessionAuthorize]
     public class ProvasController : Controller
     {
         private readonly Database db = new Database();
@@ -42,6 +43,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(Provas pr)
         {
             using (var conn = db.GetConnection())
@@ -52,6 +54,62 @@ namespace ProjetoOlimpicos.Controllers
                 cmd.Parameters.AddWithValue("@prova", pr.prova);
                 cmd.Parameters.AddWithValue("@modalidade", pr.codModalidade);
 
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+                [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(int id)
+        {
+            Provas prova = null;
+            using (var conn = db.GetConnection())
+            {
+                var sql = "SELECT * FROM provas WHERE codProva = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        prova = new Provas
+                        {
+                            codProva = reader.GetInt32("codProva"),
+                            prova = reader.GetString("prova"),
+                            codModalidade = reader.GetInt32("codModalidade")
+                        };
+                    }
+                }
+            }
+            if (prova == null) return NotFound();
+            ViewBag.Modalidades = GetModalidades();
+            return View(prova);
+        }
+
+        [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(Provas pr)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "UPDATE provas SET prova=@prova, codModalidade=@modalidade WHERE codProva=@id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@prova", pr.prova);
+                cmd.Parameters.AddWithValue("@modalidade", pr.codModalidade);
+                cmd.Parameters.AddWithValue("@id", pr.codProva);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [SessionAuthorize(RoleAnyOf = "Admin")]
+        public IActionResult Excluir(int id)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "DELETE FROM provas WHERE codProva = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
             }
             return RedirectToAction("Index");
@@ -76,9 +134,5 @@ namespace ProjetoOlimpicos.Controllers
             }
             return Modalidades;
         }
-
-
-
-
     }
 }
