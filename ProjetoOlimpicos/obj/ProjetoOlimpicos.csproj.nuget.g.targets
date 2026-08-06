@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)microsoft.net.stringtools\18.8.2\buildTransitive\netcoreapp2.0\Microsoft.NET.StringTools.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.net.stringtools\18.8.2\buildTransitive\netcoreapp2.0\Microsoft.NET.StringTools.targets')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.build.framework\18.8.2\buildTransitive\netcoreapp2.0\Microsoft.Build.Framework.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.build.framework\18.8.2\buildTransitive\netcoreapp2.0\Microsoft.Build.Framework.targets')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.build.utilities.core\18.8.2\buildTransitive\netcoreapp2.0\Microsoft.Build.Utilities.Core.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.build.utilities.core\18.8.2\buildTransitive\netcoreapp2.0\Microsoft.Build.Utilities.Core.targets')" />
-  </ImportGroup>
-</Project>
