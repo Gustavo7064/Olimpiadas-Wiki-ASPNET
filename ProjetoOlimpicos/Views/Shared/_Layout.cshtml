@@ -1,82 +1,145 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ProjetoOlimpicos</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/ProjetoOlimpicos.styles.css" asp-append-version="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>@ViewData["Title"] - Olympic Editorial Rebirth</title>
+    
+    <!-- Design System Global -->
+    <link rel="stylesheet" href="~/css/design-system.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
+    
+    <!-- Tipografia - Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <!-- HEADER / NAVEGAÇÃO PRINCIPAL -->
+    <header class="header-editorial">
+        <nav class="navbar-editorial">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProjetoOlimpicos</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <nav class="collapse navbar-collapse" id="topNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        @if (Context.Session.GetInt32("UserId") != null)
+                <!-- Logo / Branding -->
+                <div class="navbar-brand">
+                    <a href="@Url.Action("Index", "Home")" class="brand-logo">
+
+                        <span class="brand-text">OLYMPIC EDITORIAL</span>
+                    </a>
+                </div>
+                
+                <!-- Navegação Central -->
+                <nav class="navbar-menu">
+                    <a href="@Url.Action("Index", "Edicao")" class="nav-link">Edições</a>
+                    <a href="@Url.Action("Index", "Atletas")" class="nav-link">Atletas</a>
+                    <a href="@Url.Action("Index", "Provas")" class="nav-link">Provas</a>
+                </nav>
+                
+                <!-- Navegação de Usuário -->
+                <nav class="navbar-user">
+                    @if (Context.Session.GetInt32("UserId") != null)
+                    {
+                        <span class="user-greeting">
+                            <span class="text-metadata">Bem-vindo,</span>
+                            <strong>@Context.Session.GetString("Username")</strong>
+                        </span>
+                        
+                        @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
                         {
-                            <!-- Usuário logado -->
-                            <span>Bem-vindo, @Context.Session.GetString("Username")!</span>
-                            
-                        }
-                        <li class="nav-item"><a class="nav-link" asp-controller="Edicao" asp-action="Index">Edições</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="Atletas" asp-action="Index">Atletas</a></li>
-                        @if (Context.Session.GetInt32("UserId") != null)
-                        {
-                            <!-- Usuário logado -->
-                           
-                            <li class="nav-item"><a class="nav-link" asp-controller="Admin" asp-action="Logout">Logout</a></li>
-                            
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Cadastros</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" asp-controller="Modalidades" asp-action="Criar">Modalidades</a></li>
-                                    <li><a class="dropdown-item" asp-controller="Provas" asp-action="Criar">Provas</a></li>
-                                    <li><a class="dropdown-item" asp-controller="Estados" asp-action="Criar">Estados</a></li>
-                                    <li><a class="dropdown-item" asp-controller="Cidades" asp-action="Criar">Cidades</a></li>
-                                    <li><a class="dropdown-item" asp-controller="Atletas" asp-action="Criar">Cadastrar Atleta</a></li>
-                                    <li><a class="dropdown-item" asp-controller="ResultadosAtletas" asp-action="Criar">Cadastrar Resultados</a></li>
-                                    <li><a class="dropdown-item" asp-controller="Edicao" asp-action="Criar">Cadastrar Edição</a></li>
+                            <div class="nav-dropdown">
+                                <button class="btn-dropdown" aria-expanded="false" aria-label="Menu Administrativo">
+                                    <span class="text-metadata">Gestão</span>
+                                </button>
+                                <ul class="dropdown-menu" style="display: none;">
+                                    @if (Context.Session.GetString("Role") == "Admin")
+                                    {
+                                        <li><a href="@Url.Action("Index", "Admin")">Painel Admin</a></li>
+                                        <li><a href="@Url.Action("NovoUsuario", "Admin")">Novo Utilizador</a></li>
+                                        <li style="border-top: 2px solid var(--color-gray-admin);"></li>
+                                    }
+                                    <li><a href="@Url.Action("Criar", "Edicao")">Nova Edição</a></li>
+                                    <li><a href="@Url.Action("Criar", "Atletas")">Novo Atleta</a></li>
+                                    <li><a href="@Url.Action("Criar", "Provas")">Nova Prova</a></li>
+                                    <li><a href="@Url.Action("Criar", "Modalidades")">Nova Modalidade</a></li>
+                                    <li><a href="@Url.Action("Criar", "ResultadosAtletas")">Novo Resultado</a></li>
                                 </ul>
-                            </li>
+                            </div>
                         }
                         else
                         {
-                            <!-- Usuário não logado -->
-                            <li class="nav-item"><a class="nav-link" asp-controller="Admin" asp-action="Login">Login</a></li>
-
+                            <div class="nav-dropdown">
+                                <button class="btn-dropdown" aria-expanded="false" aria-label="Menu do Utilizador">
+                                    <span class="text-metadata">Menu</span>
+                                </button>
+                                <ul class="dropdown-menu" style="display: none;">
+                                    <li><a href="@Url.Action("Index", "Edicao")">Ver Edições</a></li>
+                                    <li><a href="@Url.Action("Index", "Atletas")">Ver Atletas</a></li>
+                                    <li><a href="@Url.Action("Index", "Provas")">Ver Provas</a></li>
+                                </ul>
+                            </div>
                         }
-
-                        <li class="nav-item"><a class="nav-link" asp-controller="Admin" asp-action="NovoUsuario">Novo Usuário</a></li>
-                      
-                    </ul>
-
-
+                        
+                        <a href="@Url.Action("Logout", "Admin")" class="btn btn-ghost">Logout</a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Login", "Admin")" class="btn btn-primary">Login</a>
+                        <a href="@Url.Action("Registrar", "Admin")" class="btn btn-ghost">Criar Conta</a>
+                    }
                 </nav>
-
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main role="main" class="main-content">
         <div class="container">
-            &copy; 2026 - ProjetoOlimpicos - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            @RenderBody()
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-editorial">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 - Olympic Editorial Rebirth. Todos os direitos reservados.</p>
+                <nav class="footer-links">
+                    <a href="@Url.Action("Privacy", "Home")">Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Contato</a>
+                </nav>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts -->
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    
+    <!-- Script para Dropdown -->
+    <script>
+        document.querySelectorAll('.btn-dropdown').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const menu = this.nextElementSibling;
+                const isOpen = menu.style.display === 'block';
+                menu.style.display = isOpen ? 'none' : 'block';
+                this.setAttribute('aria-expanded', !isOpen);
+            });
+        });
+        
+        // Fechar dropdown ao clicar fora
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.nav-dropdown')) {
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    menu.style.display = 'none';
+                });
+                document.querySelectorAll('.btn-dropdown').forEach(btn => {
+                    btn.setAttribute('aria-expanded', 'false');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

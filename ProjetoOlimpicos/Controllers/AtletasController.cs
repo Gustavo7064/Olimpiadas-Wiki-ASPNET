@@ -70,6 +70,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(Atletas atleta)
         {
             using (var conn = db.GetConnection())
@@ -88,6 +89,71 @@ namespace ProjetoOlimpicos.Controllers
             return RedirectToAction("Index");
         }
 
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(int id)
+        {
+            Atletas atleta = null;
+            using (var conn = db.GetConnection())
+            {
+                var sql = "SELECT * FROM atletas WHERE codAtleta = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        atleta = new Atletas
+                        {
+                            CodAtleta = reader.GetInt32("codAtleta"),
+                            NomeAtleta = reader.GetString("nomeAtleta"),
+                            DataNascimento = reader.IsDBNull(reader.GetOrdinal("dataNascimento")) ? null : reader.GetString("dataNascimento"),
+                            Sexo = reader.GetChar("sexo"),
+                            Altura = reader.IsDBNull(reader.GetOrdinal("altura")) ? null : reader.GetDecimal("altura"),
+                            Peso = reader.IsDBNull(reader.GetOrdinal("peso")) ? null : reader.GetDecimal("peso"),
+                            CodCidade = reader.GetInt32("codCidade")
+                        };
+                    }
+                }
+            }
+            if (atleta == null) return NotFound();
+            ViewBag.Cidades = GetCidades();
+            return View(atleta);
+        }
+
+        [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(Atletas atleta)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = @"UPDATE atletas SET nomeAtleta=@nome, dataNascimento=@data, sexo=@sexo, 
+                            altura=@altura, peso=@peso, codCidade=@cidade WHERE codAtleta=@id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@nome", atleta.NomeAtleta);
+                cmd.Parameters.AddWithValue("@data", atleta.DataNascimento);
+                cmd.Parameters.AddWithValue("@sexo", atleta.Sexo);
+                cmd.Parameters.AddWithValue("@altura", atleta.Altura);
+                cmd.Parameters.AddWithValue("@peso", atleta.Peso);
+                cmd.Parameters.AddWithValue("@cidade", atleta.CodCidade);
+                cmd.Parameters.AddWithValue("@id", atleta.CodAtleta);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [SessionAuthorize(RoleAnyOf = "Admin")]
+        public IActionResult Excluir(int id)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "DELETE FROM atletas WHERE codAtleta = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
         private List<Cidades> GetCidades()
         {
             List<Cidades> cidades = new List<Cidades>();
@@ -100,6 +166,7 @@ namespace ProjetoOlimpicos.Controllers
                 {
                     cidades.Add(new Cidades
                     {
+                        CodAtleta = 0, // Not used here
                         CodCidade = reader.GetInt32("codCidade"),
                         NomeCidade = reader.GetString("nomeCidade"),
                         CodEstado = reader.GetInt32("codEstado")

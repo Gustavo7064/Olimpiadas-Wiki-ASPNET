@@ -46,6 +46,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(Edicao edicao)
         {
             using (var conn = db.GetConnection())
@@ -60,25 +61,59 @@ namespace ProjetoOlimpicos.Controllers
             return RedirectToAction("Index");
         }
 
-        private List<Cidades> GetCidades()
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(int id)
         {
-            List<Cidades> cidades = new List<Cidades>();
+            Edicao edicao = null;
             using (var conn = db.GetConnection())
             {
-                var sql = "SELECT Distinct * FROM cidades order by nomeCidade";
+                var sql = "SELECT * FROM edicao WHERE codedicao = @id";
                 var cmd = new MySqlCommand(sql, conn);
-                var reader = cmd.ExecuteReader();
-                while (reader.Read())
+                cmd.Parameters.AddWithValue("@id", id);
+                using (var reader = cmd.ExecuteReader())
                 {
-                    cidades.Add(new Cidades
+                    if (reader.Read())
                     {
-                        CodCidade = reader.GetInt32("codCidade"),
-                        NomeCidade = reader.GetString("nomeCidade"),
-                        CodEstado = reader.GetInt32("codEstado")
-                    });
+                        edicao = new Edicao
+                        {
+                            Codedicao = reader.GetInt32("codedicao"),
+                            Ano = reader.GetInt32("ano"),
+                            Sede = reader.GetString("sede")
+                        };
+                    }
                 }
             }
-            return cidades;
+            if (edicao == null) return NotFound();
+            return View(edicao);
+        }
+
+        [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(Edicao edicao)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "UPDATE edicao SET ano=@ano, sede=@sede WHERE codedicao=@id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@ano", edicao.Ano);
+                cmd.Parameters.AddWithValue("@sede", edicao.Sede);
+                cmd.Parameters.AddWithValue("@id", edicao.Codedicao);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [SessionAuthorize(RoleAnyOf = "Admin")]
+        public IActionResult Excluir(int id)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "DELETE FROM edicao WHERE codedicao = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
         }
 
         public IActionResult Atletas(int id)
@@ -209,7 +244,7 @@ namespace ProjetoOlimpicos.Controllers
                 }
             }
 
-            ViewBag.Participacoes = participacoes;
+            ViewBag.Participacoes = participacoes ?? new List<(string Prova, string Edicao, string Resultado, string Medalha)>();
             return View(atleta);
         }
 

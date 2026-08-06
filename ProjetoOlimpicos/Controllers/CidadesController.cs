@@ -6,6 +6,7 @@ using ProjetoOlimpicos.Models;
 
 namespace ProjetoOlimpicos.Controllers
 {
+    [SessionAuthorize]
     public class CidadesController : Controller
     {
         private readonly Database db = new Database();
@@ -43,6 +44,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(Cidades cidade)
         {
             using (var conn = db.GetConnection())
@@ -53,6 +55,62 @@ namespace ProjetoOlimpicos.Controllers
                 cmd.Parameters.AddWithValue("@nome", cidade.NomeCidade);
                 cmd.Parameters.AddWithValue("@estado", cidade.CodEstado);
                
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(int id)
+        {
+            Cidades cid = null;
+            using (var conn = db.GetConnection())
+            {
+                var sql = "SELECT * FROM cidades WHERE codCidade = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        cid = new Cidades
+                        {
+                            CodCidade = reader.GetInt32("codCidade"),
+                            NomeCidade = reader.GetString("nomeCidade"),
+                            CodEstado = reader.GetInt32("codEstado")
+                        };
+                    }
+                }
+            }
+            if (cid == null) return NotFound();
+            ViewBag.Estados = GetEstados();
+            return View(cid);
+        }
+
+        [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(Cidades cid)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "UPDATE cidades SET nomeCidade=@nome, codEstado=@estado WHERE codCidade=@id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@nome", cid.NomeCidade);
+                cmd.Parameters.AddWithValue("@estado", cid.CodEstado);
+                cmd.Parameters.AddWithValue("@id", cid.CodCidade);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [SessionAuthorize(RoleAnyOf = "Admin")]
+        public IActionResult Excluir(int id)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "DELETE FROM cidades WHERE codCidade = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
             }
             return RedirectToAction("Index");
@@ -78,4 +136,4 @@ namespace ProjetoOlimpicos.Controllers
             return estados;
         }
     }
-}   
+}

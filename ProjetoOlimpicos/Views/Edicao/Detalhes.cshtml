@@ -1,11 +1,22 @@
 ﻿@model ProjetoOlimpicos.Models.Atletas
 @{
-    var participacoes = ViewBag.Participacoes as List<(string Prova, string Edicao, string Resultado, string Medalha)>;
+    var participacoes = ViewBag.Participacoes as List<(string Prova, string Edicao, string Resultado, string Medalha)> 
+                        ?? new List<(string Prova, string Edicao, string Resultado, string Medalha)>();
 }
 
-<h2>Detalhes do Atleta</h2>
+@if (Model == null)
+{
+    <div class="alert alert-error">
+        <h2 class="section-title">Atleta não encontrado</h2>
+        <p>Não foi possível localizar as informações detalhadas para este registo.</p>
+        <a href="javascript:history.back()" class="btn btn-primary">Voltar</a>
+    </div>
+}
+else
+{
+    <h2>Detalhes do Atleta</h2>
 
-<p><strong>Nome:</strong> @Model.NomeAtleta</p>
+    <p><strong>Nome:</strong> @Model.NomeAtleta</p>
 <p><strong>Data de Nascimento:</strong> @Model.DataNascimento</p>
 <p>
     <strong>Cidade de Nascimento:</strong>
@@ -41,8 +52,6 @@
 else
 {
     <p>O atleta não possui participações registradas.</p>
+}    <p><a href="/Edicao/Index">Voltar</a></p>
 }
-
-<p><a href="/Edicao/Index">Voltar</a></p>
-
 

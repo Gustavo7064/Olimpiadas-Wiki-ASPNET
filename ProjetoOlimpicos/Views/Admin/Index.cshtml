@@ -1,0 +1,81 @@
+@model List<ProjetoOlimpicos.Models.Usuario>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Gestão de Usuários";
+}
+
+<div class="editorial-section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-lg);">
+        <div>
+            <h1 class="section-title">Painel Administrativo</h1>
+            <p class="section-subtitle">Gestão de utilizadores e conteúdos do portal</p>
+        </div>
+        <div style="display: flex; gap: var(--spacing-md);">
+            <a href="@Url.Action("NovoUsuario", "Admin")" class="btn btn-primary">Novo Usuário</a>
+        </div>
+    </div>
+
+    <!-- Gestão de Usuários -->
+    <div class="editorial-card mb-3xl">
+        <h3 class="editorial-card-title">Utilizadores do Sistema</h3>
+        <table class="editorial-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome de Usuário</th>
+                    <th>Perfil</th>
+                    <th>Estado</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>#@user.Id</td>
+                        <td><strong>@user.Username</strong></td>
+                        <td>
+                            <span class="badge @(user.Role == "Admin" ? "badge-gold" : "badge-blue")">@user.Role</span>
+                        </td>
+                        <td>
+                            @if (user.Ativo)
+                            {
+                                <span style="color: #059669;">● Ativo</span>
+                            }
+                            else
+                            {
+                                <span style="color: #dc2626;">● Inativo</span>
+                            }
+                        </td>
+                        <td>
+                            <div style="display: flex; gap: var(--spacing-sm);">
+                                <a href="@Url.Action("EditarUsuario", "Admin", new { id = user.Id })" class="btn btn-ghost" style="padding: 4px 8px; font-size: 12px;">Editar</a>
+                                
+                                @if (user.Id != Context.Session.GetInt32("UserId"))
+                                {
+                                    <form action="@Url.Action("ExcluirUsuario", "Admin", new { id = user.Id })" method="post" onsubmit="return confirm('Tem certeza que deseja excluir este usuário?');" style="margin:0;">
+                                        <button type="submit" class="btn btn-ghost" style="color: #dc2626; padding: 4px 8px; font-size: 12px;">Excluir</button>
+                                    </form>
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Atalhos de Cadastro -->
+    <div class="editorial-card">
+        <h3 class="editorial-card-title">Gestão de Conteúdos</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--spacing-md); margin-top: var(--spacing-md);">
+            <a href="@Url.Action("Criar", "Edicao")" class="btn btn-ghost">Cadastrar Edição</a>
+            <a href="@Url.Action("Criar", "Atletas")" class="btn btn-ghost">Cadastrar Atleta</a>
+            <a href="@Url.Action("Criar", "Modalidades")" class="btn btn-ghost">Cadastrar Modalidade</a>
+            <a href="@Url.Action("Criar", "Provas")" class="btn btn-ghost">Cadastrar Prova</a>
+            <a href="@Url.Action("Criar", "Estados")" class="btn btn-ghost">Cadastrar Estado</a>
+            <a href="@Url.Action("Criar", "Cidades")" class="btn btn-ghost">Cadastrar Cidade</a>
+            <a href="@Url.Action("Criar", "ResultadosAtletas")" class="btn btn-ghost">Cadastrar Resultado</a>
+        </div>
+    </div>
+</div>

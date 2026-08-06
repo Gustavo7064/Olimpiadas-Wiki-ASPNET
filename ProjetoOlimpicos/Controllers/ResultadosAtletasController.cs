@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering; // Adicionado para SelectListItem
 
 namespace ProjetoOlimpicos.Controllers
 {
+    [SessionAuthorize]
     public class ResultadosAtletasController : Controller
     {
         private readonly Database db = new Database();
@@ -28,6 +29,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(ResultadosAtletas resultadosAtletas)
         {
             using (var conn = db.GetConnection())
