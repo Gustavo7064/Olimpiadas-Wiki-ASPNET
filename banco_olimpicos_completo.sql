@@ -186,6 +186,12 @@ CREATE TABLE IF NOT EXISTS usuarios (
   criado_em DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+-- 11.1 Usuário administrador inicial
+-- Login: admin | Senha: admin123
+-- (o hash abaixo já corresponde a "admin123", gerado com BCrypt)
+INSERT INTO usuarios (username, password_hash, role, ativo) VALUES
+('admin', '$2b$11$Th2s3LGuMvm1kbCWqgp3wu3UMORplMvRoi2sn4.Xo5hCYeBp/Ihxu', 'Admin', 1);
+
 -- 12. Inserindo Provas de Ginástica (ID 5)
 INSERT INTO provas (prova, codModalidade) VALUES
 ('Argolas Masculino', 5), ('Barra Fixa', 5), ('Barra Fixa Masculino', 5), ('Barras Assimétricas Feminino', 5),

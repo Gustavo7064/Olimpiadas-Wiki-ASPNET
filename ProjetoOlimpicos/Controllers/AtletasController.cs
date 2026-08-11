@@ -166,7 +166,6 @@ namespace ProjetoOlimpicos.Controllers
                 {
                     cidades.Add(new Cidades
                     {
-                        CodAtleta = 0, // Not used here
                         CodCidade = reader.GetInt32("codCidade"),
                         NomeCidade = reader.GetString("nomeCidade"),
                         CodEstado = reader.GetInt32("codEstado")
