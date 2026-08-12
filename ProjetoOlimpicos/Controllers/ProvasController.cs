@@ -13,10 +13,12 @@ namespace ProjetoOlimpicos.Controllers
 
         public IActionResult Index()
         {
-            List<Provas> pr= new List<Provas>();
+            List<Provas> pr = new List<Provas>();
             using (MySqlConnection conn = db.GetConnection())
             {
-                string sql = "SELECT * FROM provas";
+                string sql = @"SELECT p.*, m.nomeModalidade 
+                             FROM provas p 
+                             LEFT JOIN modalidades m ON p.codModalidade = m.codModalidade";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -24,10 +26,10 @@ namespace ProjetoOlimpicos.Controllers
                     {
                         pr.Add(new Provas
                         {
-                            codProva = reader.GetInt32("codProva"), // oq esta em aspas pega do banco
+                            codProva = reader.GetInt32("codProva"),
                             prova = reader.GetString("prova"),
                             codModalidade = reader.GetInt32("codModalidade"),
-
+                            nomeModalidade = reader.IsDBNull(reader.GetOrdinal("nomeModalidade")) ? "" : reader.GetString("nomeModalidade")
                         });
                     }
                 }
@@ -43,6 +45,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(Provas pr)
         {
@@ -87,6 +90,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Editar(Provas pr)
         {
@@ -102,15 +106,24 @@ namespace ProjetoOlimpicos.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin")]
         public IActionResult Excluir(int id)
         {
-            using (var conn = db.GetConnection())
+            try
             {
-                var sql = "DELETE FROM provas WHERE codProva = @id";
-                var cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.ExecuteNonQuery();
+                using (var conn = db.GetConnection())
+                {
+                    var sql = "DELETE FROM provas WHERE codProva = @id";
+                    var cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (MySqlException ex) when (ex.Number == 1451)
+            {
+                TempData["Erro"] = "Não é possível excluir esta prova pois existem resultados vinculados a ela.";
             }
             return RedirectToAction("Index");
         }

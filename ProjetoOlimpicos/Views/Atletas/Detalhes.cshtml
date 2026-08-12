@@ -1,0 +1,98 @@
+@model ProjetoOlimpicos.Models.Atletas
+@{
+    ViewData["Title"] = $"{Model.NomeAtleta} - Olympic Editorial";
+    var participacoes = ViewBag.Participacoes as List<(string Prova, string Edicao, string Resultado, string Medalha)>;
+}
+
+<div class="editorial-section">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--spacing-xl); border-bottom: 2px solid var(--color-black-editorial); padding-bottom: var(--spacing-lg);">
+        <div>
+            <h1 class="section-title" style="font-size: 3rem; margin: 0;">@Model.NomeAtleta</h1>
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <span class="badge @(Model.Sexo == 'M' ? "badge-blue" : "badge-gold")">
+                    @(Model.Sexo == 'M' ? "Masculino" : "Feminino")
+                </span>
+                @if (!string.IsNullOrEmpty(Model.Modalidade))
+                {
+                    <span class="badge">@Model.Modalidade</span>
+                }
+            </div>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+            {
+                <a href="@Url.Action("Editar", "Atletas", new { id = Model.CodAtleta })" class="btn btn-primary">Editar Perfil</a>
+            }
+            <a href="@Url.Action("Index", "Atletas")" class="btn btn-ghost">Voltar</a>
+        </div>
+    </div>
+
+    <div class="editorial-grid">
+        <div class="stage-center" style="grid-column: span 8;">
+            <div class="editorial-card">
+                <h3 class="editorial-card-title">Informações Biográficas</h3>
+                <ul class="editorial-list">
+                    <li class="editorial-list-item">
+                        <div class="editorial-list-item-main">
+                            <span class="text-metadata">Data de Nascimento</span>
+                            <h4 class="editorial-list-item-title">@(string.IsNullOrEmpty(Model.DataNascimento) ? "Não informada" : Model.DataNascimento)</h4>
+                        </div>
+                    </li>
+                    <li class="editorial-list-item">
+                        <div class="editorial-list-item-main">
+                            <span class="text-metadata">Local de Origem</span>
+                            <h4 class="editorial-list-item-title">@Model.CidadeNascimento, @Model.EstadoNascimento</h4>
+                        </div>
+                    </li>
+                    <li class="editorial-list-item">
+                        <div class="editorial-list-item-main">
+                            <span class="text-metadata">Físico</span>
+                            <h4 class="editorial-list-item-title">@(Model.Altura.HasValue ? $"{Model.Altura} cm" : "-") | @(Model.Peso.HasValue ? $"{Model.Peso} kg" : "-")</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="editorial-card" style="margin-top: 40px;">
+                <h3 class="editorial-card-title">Histórico de Competições</h3>
+                @if (participacoes != null && participacoes.Count > 0)
+                {
+                    <table class="editorial-table">
+                        <thead>
+                            <tr>
+                                <th>Edição</th>
+                                <th>Prova</th>
+                                <th>Resultado</th>
+                                <th>Medalha</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var p in participacoes)
+                            {
+                                <tr>
+                                    <td>@p.Edicao</td>
+                                    <td>@p.Prova</td>
+                                    <td>@p.Resultado</td>
+                                    <td>
+                                        @if (p.Medalha != "-" && !string.IsNullOrEmpty(p.Medalha))
+                                        {
+                                            <span class="badge @(p.Medalha == "Ouro" ? "badge-gold" : "badge-blue")">@p.Medalha</span>
+                                        }
+                                        else
+                                        {
+                                            <span>-</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p style="padding: 20px; color: var(--color-gray-metadata);">Nenhum resultado olímpico registrado para este atleta.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>

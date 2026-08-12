@@ -53,7 +53,8 @@
                                 
                                 @if (user.Id != Context.Session.GetInt32("UserId"))
                                 {
-                                    <form action="@Url.Action("ExcluirUsuario", "Admin", new { id = user.Id })" method="post" onsubmit="return confirm('Tem certeza que deseja excluir este usuário?');" style="margin:0;">
+                                    <form asp-action="ExcluirUsuario" asp-route-id="@user.Id" method="post" onsubmit="return confirm('Tem certeza que deseja excluir este usuário?');" style="margin:0;">
+                                        @Html.AntiForgeryToken()
                                         <button type="submit" class="btn btn-ghost" style="color: #dc2626; padding: 4px 8px; font-size: 12px;">Excluir</button>
                                     </form>
                                 }

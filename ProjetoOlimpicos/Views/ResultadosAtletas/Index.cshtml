@@ -1,5 +1,73 @@
-﻿@{
-    ViewBag.Title = "Resultados de Atletas";
+﻿@model List<dynamic>
+@{
+    ViewData["Title"] = "Resultados - Olympic Editorial";
 }
 
-Resultado Cadastrado com Sucesso.
+<div class="page-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; border-bottom: 1px solid var(--color-gray-admin); padding-bottom: 20px;">
+    <div class="page-header-content">
+        <h1 class="page-title" style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; text-transform: uppercase; color: var(--color-black-editorial); margin: 0;">Resultados</h1>
+        <p class="page-subtitle" style="font-size: 0.8rem; color: var(--color-gray-metadata); text-transform: uppercase; letter-spacing: 2px; margin: 5px 0 0 0;">Histórico de medalhas e marcas</p>
+    </div>
+    @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+    {
+        <a href="@Url.Action("Criar", "ResultadosAtletas")" class="btn btn-primary">+ Novo Resultado</a>
+    }
+</div>
+
+<div class="editorial-grid">
+    <div class="stage-center" style="grid-column: span 12;">
+        @if (Model != null && Model.Count > 0)
+        {
+            <table class="editorial-table" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th style="text-align: left; padding: 12px; border-bottom: 2px solid var(--color-black-editorial); text-transform: uppercase; font-size: 0.7rem;">Atleta</th>
+                        <th style="text-align: left; padding: 12px; border-bottom: 2px solid var(--color-black-editorial); text-transform: uppercase; font-size: 0.7rem;">Prova</th>
+                        <th style="text-align: left; padding: 12px; border-bottom: 2px solid var(--color-black-editorial); text-transform: uppercase; font-size: 0.7rem;">Edição</th>
+                        <th style="text-align: left; padding: 12px; border-bottom: 2px solid var(--color-black-editorial); text-transform: uppercase; font-size: 0.7rem;">Resultado</th>
+                        <th style="text-align: left; padding: 12px; border-bottom: 2px solid var(--color-black-editorial); text-transform: uppercase; font-size: 0.7rem;">Medalha</th>
+                        <th style="text-align: left; padding: 12px; border-bottom: 2px solid var(--color-black-editorial); text-transform: uppercase; font-size: 0.7rem;">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var res in Model)
+                    {
+                        <tr>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--color-gray-admin);"><strong>@res.NomeAtleta</strong></td>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--color-gray-admin);">@res.Prova</td>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--color-gray-admin);">@res.AnoEdicao - @res.SedeEdicao</td>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--color-gray-admin);">@res.Resultado</td>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--color-gray-admin);">
+                                @if (!string.IsNullOrEmpty(res.Medalha))
+                                {
+                                    <span class="badge @(res.Medalha == "Ouro" ? "badge-gold" : "badge-blue")">@res.Medalha</span>
+                                }
+                            </td>
+                            <td style="padding: 12px; border-bottom: 1px solid var(--color-gray-admin);">
+                                <div style="display: flex; gap: 10px;">
+                                    @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+                                    {
+                                        <a href="@Url.Action("Editar", "ResultadosAtletas", new { codAtleta = res.CodAtleta, codProva = res.CodProva, edicao = res.Edicao })" class="btn btn-ghost" style="font-size: 12px; padding: 4px 8px;">Editar</a>
+                                    }
+                                    @if (Context.Session.GetString("Role") == "Admin")
+                                    {
+                                        <form asp-action="Excluir" asp-route-codAtleta="@res.CodAtleta" asp-route-codProva="@res.CodProva" asp-route-edicao="@res.Edicao" method="post" onsubmit="return confirm('Excluir este resultado?');" style="margin:0;">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="btn btn-ghost" style="color: var(--color-gold-emblem); font-size: 12px; padding: 4px 8px;">Excluir</button>
+                                        </form>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div style="padding: 50px; text-align: center; background: var(--color-gray-snow); border-radius: 8px;">
+                <p style="color: var(--color-gray-metadata);">Nenhum resultado cadastrado ainda.</p>
+            </div>
+        }
+    </div>
+</div>

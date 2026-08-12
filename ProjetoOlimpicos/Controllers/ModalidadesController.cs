@@ -43,6 +43,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(Modalidades modalidade)
         {
@@ -83,6 +84,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Editar(Modalidades mod)
         {
@@ -97,15 +99,24 @@ namespace ProjetoOlimpicos.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin")]
         public IActionResult Excluir(int id)
         {
-            using (var conn = db.GetConnection())
+            try
             {
-                var sql = "DELETE FROM modalidades WHERE codModalidade = @id";
-                var cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.ExecuteNonQuery();
+                using (var conn = db.GetConnection())
+                {
+                    var sql = "DELETE FROM modalidades WHERE codModalidade = @id";
+                    var cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (MySqlException ex) when (ex.Number == 1451)
+            {
+                TempData["Erro"] = "Não é possível excluir esta modalidade pois existem atletas ou provas vinculadas a ela.";
             }
             return RedirectToAction("Index");
         }

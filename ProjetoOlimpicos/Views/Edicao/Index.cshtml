@@ -114,6 +114,7 @@
                                 @if (Context.Session.GetString("Role") == "Admin")
                                 {
                                     <form asp-action="Excluir" asp-route-id="@edicao.Codedicao" method="post" onsubmit="return confirm('Tem certeza que deseja excluir esta edição? Todos os atletas e resultados vinculados podem ser afetados.');">
+                                        @Html.AntiForgeryToken()
                                         <button type="submit" class="btn btn-ghost" style="color: var(--color-gold-emblem); width: 100%;">Excluir</button>
                                     </form>
                                 }

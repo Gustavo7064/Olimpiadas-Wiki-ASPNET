@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>@ViewData["Title"] - Olympic Editorial Rebirth</title>
+    <title>@ViewData["Title"] - Olympic Editorial</title>
     
     <!-- Design System Global -->
     <link rel="stylesheet" href="~/css/design-system.css" asp-append-version="true" />
@@ -35,6 +35,10 @@
                     <a href="@Url.Action("Index", "Edicao")" class="nav-link">Edições</a>
                     <a href="@Url.Action("Index", "Atletas")" class="nav-link">Atletas</a>
                     <a href="@Url.Action("Index", "Provas")" class="nav-link">Provas</a>
+                    <a href="@Url.Action("Index", "Modalidades")" class="nav-link">Modalidades</a>
+                    <a href="@Url.Action("Index", "Cidades")" class="nav-link">Cidades</a>
+                    <a href="@Url.Action("Index", "Estados")" class="nav-link">Estados</a>
+                    <a href="@Url.Action("Index", "ResultadosAtletas")" class="nav-link">Resultados</a>
                 </nav>
                 
                 <!-- Navegação de Usuário -->
@@ -96,6 +100,12 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main role="main" class="main-content">
         <div class="container">
+            @if (TempData["Erro"] != null)
+            {
+                <div class="alert alert-danger" style="margin-bottom: 20px; padding: 15px; background-color: #fee; border-left: 5px solid #dc3545; border-radius: 4px; color: #721c24;">
+                    @TempData["Erro"]
+                </div>
+            }
             @RenderBody()
         </div>
     </main>
@@ -104,7 +114,7 @@
     <footer class="footer-editorial">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 - Olympic Editorial Rebirth. Todos os direitos reservados.</p>
+                <p>&copy; 2026 - Olympic Editorial. Todos os direitos reservados.</p>
                 <nav class="footer-links">
                     <a href="@Url.Action("Privacy", "Home")">Privacidade</a>
                     <a href="#">Termos de Uso</a>

@@ -1,0 +1,49 @@
+@model ProjetoOlimpicos.Models.ResultadosAtletas
+@{
+    ViewBag.Title = "Editar Resultado";
+}
+
+<style>
+    .form-container {
+        width: 500px;
+        margin: 50px auto;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 { text-align: center; margin-bottom: 20px; color: #333; }
+    label { display: block; margin-top: 10px; color: #444; }
+    input[type="text"], input[type="number"], select {
+        width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;
+    }
+    button {
+        margin-top: 20px; width: 100%; padding: 12px; background-color: #4CAF50; color: white; font-weight: bold; border: none; border-radius: 5px; cursor: pointer;
+    }
+    button:hover { background-color: #45a049; }
+</style>
+
+<div class="form-container">
+    <h2>Editar Resultado</h2>
+
+    <form asp-action="Editar" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="codAtleta" />
+        <input type="hidden" asp-for="codProva" />
+        <input type="hidden" asp-for="edicao" />
+
+        <label>Resultado (ex: 1ºLugar):</label>
+        <input asp-for="resultado" type="text" required />
+
+        <label>Medalha (ex: Ouro, Prata, Bronze):</label>
+        <select asp-for="medalha">
+            <option value="">Nenhuma</option>
+            <option value="Ouro">Ouro</option>
+            <option value="Prata">Prata</option>
+            <option value="Bronze">Bronze</option>
+        </select>
+
+        <button type="submit">Salvar Alterações</button>
+        <a href="@Url.Action("Index", "ResultadosAtletas")" style="display: block; text-align: center; margin-top: 15px; color: #666; text-decoration: none;">Cancelar</a>
+    </form>
+</div>

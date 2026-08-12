@@ -23,7 +23,7 @@
                     <div class="editorial-list-item-main">
                         <h3 class="editorial-list-item-title">@pr.prova</h3>
                         <div class="editorial-list-item-meta">
-                            <span class="badge">Modalidade ID: @pr.codModalidade</span>
+                            <span class="badge">@pr.nomeModalidade</span>
                         </div>
                     </div>
                     <div class="editorial-list-item-action" style="display: flex; gap: 10px;">
@@ -34,6 +34,7 @@
                         @if (Context.Session.GetString("Role") == "Admin")
                         {
                             <form asp-action="Excluir" asp-route-id="@pr.codProva" method="post" onsubmit="return confirm('Excluir esta prova?');">
+                                @Html.AntiForgeryToken()
                                 <button type="submit" class="btn btn-ghost" style="color: var(--color-gold-emblem);">Excluir</button>
                             </form>
                         }

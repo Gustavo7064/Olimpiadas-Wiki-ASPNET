@@ -44,6 +44,7 @@ namespace ProjetoOlimpicos.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(Estados estado)
         {
@@ -84,6 +85,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Editar(Estados est)
         {
@@ -98,15 +100,24 @@ namespace ProjetoOlimpicos.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin")]
         public IActionResult Excluir(int id)
         {
-            using (var conn = db.GetConnection())
+            try
             {
-                var sql = "DELETE FROM estados WHERE codEstado = @id";
-                var cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.ExecuteNonQuery();
+                using (var conn = db.GetConnection())
+                {
+                    var sql = "DELETE FROM estados WHERE codEstado = @id";
+                    var cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (MySqlException ex) when (ex.Number == 1451)
+            {
+                TempData["Erro"] = "Não é possível excluir este estado pois existem cidades vinculadas a ele.";
             }
             return RedirectToAction("Index");
         }

@@ -46,6 +46,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Criar(Edicao edicao)
         {
@@ -88,6 +89,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
         public IActionResult Editar(Edicao edicao)
         {
@@ -103,15 +105,24 @@ namespace ProjetoOlimpicos.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin")]
         public IActionResult Excluir(int id)
         {
-            using (var conn = db.GetConnection())
+            try
             {
-                var sql = "DELETE FROM edicao WHERE codedicao = @id";
-                var cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.ExecuteNonQuery();
+                using (var conn = db.GetConnection())
+                {
+                    var sql = "DELETE FROM edicao WHERE codedicao = @id";
+                    var cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (MySqlException ex) when (ex.Number == 1451)
+            {
+                TempData["Erro"] = "Não é possível excluir esta edição pois existem resultados vinculados a ela.";
             }
             return RedirectToAction("Index");
         }
@@ -172,17 +183,13 @@ namespace ProjetoOlimpicos.Controllers
 
             using (var conn = db.GetConnection())
             {
-                string query = @"
-         SELECT 
-             a.codAtleta,a.nomeAtleta,a.dataNascimento,a.sexo,c.codCidade, c.nomeCidade,e.nomeEstado,
-             m.codModalidade, m.nomeModalidade,p.Prova,r.resultado,r.medalha 
-                 FROM atletas a
-                 JOIN cidades c ON c.codCidade = a.codCidade
-                 JOIN estados e ON e.codEstado = c.codEstado
-                 JOIN resultadosatletas r ON r.codAtleta = a.codAtleta
-                 JOIN provas p ON p.codProva = r.codProva
-                 JOIN modalidades m ON m.codModalidade = p.codModalidade
-                 WHERE a.codAtleta = @id";
+string query = @"
+	         SELECT 
+	             a.codAtleta,a.nomeAtleta,a.dataNascimento,a.sexo,c.codCidade, c.nomeCidade,e.nomeEstado
+	                 FROM atletas a
+	                 LEFT JOIN cidades c ON c.codCidade = a.codCidade
+	                 LEFT JOIN estados e ON e.codEstado = c.codEstado
+	                 WHERE a.codAtleta = @id";
 
                 var cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", id);
@@ -198,8 +205,6 @@ namespace ProjetoOlimpicos.Controllers
                             DataNascimento = reader.GetString("dataNascimento"),
                             Sexo = reader.GetChar("sexo"),
                             CidadeNascimento = reader.GetString("nomeCidade"),
-                            CodModalidade = reader.GetInt32("codModalidade"),
-                            Modalidade = reader.GetString("nomeModalidade"),
                             EstadoNascimento = reader.GetString("nomeEstado"),
                             CodCidade = reader.GetInt32("codCidade")
                         };

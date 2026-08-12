@@ -34,6 +34,7 @@
                         @if (Context.Session.GetString("Role") == "Admin")
                         {
                             <form asp-action="Excluir" asp-route-id="@cid.CodCidade" method="post" onsubmit="return confirm('Excluir esta cidade?');">
+                                @Html.AntiForgeryToken()
                                 <button type="submit" class="btn btn-ghost" style="color: var(--color-gold-emblem);">Excluir</button>
                             </form>
                         }

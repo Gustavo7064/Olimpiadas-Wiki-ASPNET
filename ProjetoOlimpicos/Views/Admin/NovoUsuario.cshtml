@@ -12,6 +12,7 @@
 }
 
 <form asp-action="NovoUsuario" method="post">
+    @Html.AntiForgeryToken()
     <div>
         <label>Usuário:</label>
         <input asp-for="Username" />

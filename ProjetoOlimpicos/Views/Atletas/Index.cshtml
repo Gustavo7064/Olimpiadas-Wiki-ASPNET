@@ -116,7 +116,7 @@
                             </div>
 
                             <div class="editorial-list-item-action" style="display: flex; gap: 10px; align-items: center;">
-                                <a href="@Url.Action("Detalhes", "Edicao", new { id = atleta.CodAtleta })" class="btn btn-primary">Ver Perfil</a>
+                                <a href="@Url.Action("Detalhes", "Atletas", new { id = atleta.CodAtleta })" class="btn btn-primary">Ver Perfil</a>
                                 
                                 @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
                                 {
@@ -126,6 +126,7 @@
                                 @if (Context.Session.GetString("Role") == "Admin")
                                 {
                                     <form asp-action="Excluir" asp-route-id="@atleta.CodAtleta" method="post" onsubmit="return confirm('Tem certeza que deseja excluir este atleta?');" style="display:inline;">
+                                        @Html.AntiForgeryToken()
                                         <button type="submit" class="btn btn-ghost" style="color: var(--color-gold-emblem);">Excluir</button>
                                     </form>
                                 }

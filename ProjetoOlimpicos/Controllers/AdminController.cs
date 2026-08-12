@@ -88,10 +88,10 @@ namespace ProjetoOlimpicos.Controllers
 
         // POST: /Admin/NovoUsuario
         [HttpPost]
-        
+        [ValidateAntiForgeryToken]
+        [SessionAuthorize(RoleAnyOf = "Admin")]
         public IActionResult NovoUsuario(Usuario vm)
         {
-                
             if (string.IsNullOrWhiteSpace(vm.Username) || string.IsNullOrWhiteSpace(vm.Password))
             {
                 ViewBag.Erro = "Preencha usuário e senha.";
@@ -169,6 +169,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin")]
         public IActionResult EditarUsuario(Usuario user, string? newPassword)
         {
@@ -202,6 +203,7 @@ namespace ProjetoOlimpicos.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [SessionAuthorize(RoleAnyOf = "Admin")]
         public IActionResult ExcluirUsuario(int id)
         {
@@ -264,9 +266,9 @@ namespace ProjetoOlimpicos.Controllers
 
                 return RedirectToAction("Login");
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
-                ViewBag.Erro = "Erro ao criar conta: " + ex.Message;
+                ViewBag.Erro = "Ocorreu um erro ao criar a conta. Por favor, tente novamente.";
                 return View();
             }
         }
