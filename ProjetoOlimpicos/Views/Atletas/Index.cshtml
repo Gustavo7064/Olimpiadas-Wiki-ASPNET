@@ -1,0 +1,415 @@
+﻿@model List<ProjetoOlimpicos.Models.Atletas>
+
+@{
+    ViewData["Title"] = "Atletas - Olympic Editorial Rebirth";
+}
+
+<div class="atletas-page">
+    <!-- Header da Página -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Atletas Olímpicos</h1>
+            <p class="page-subtitle">Conheça os competidores cadastrados no portal</p>
+        </div>
+        
+        @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+        {
+            <a href="@Url.Action("Criar", "Atletas")" class="btn btn-primary">+ Novo Atleta</a>
+        }
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="editorial-grid">
+        <!-- Left Rail: Filtros -->
+        <aside class="rail-left">
+            <nav class="filters-sidebar">
+                <h3 class="sidebar-title">Filtros</h3>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Sexo</label>
+                    <select id="filterSexo" class="form-control filter-select">
+                        <option value="">Todos</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-label">Modalidade</label>
+                    <select id="filterModalidade" class="form-control filter-select">
+                        <option value="">Todas</option>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            @foreach (var modalidade in Model.Where(a => !string.IsNullOrEmpty(a.Modalidade)).Select(a => a.Modalidade).Distinct())
+                            {
+                                <option value="@modalidade">@modalidade</option>
+                            }
+                        }
+                    </select>
+                </div>
+
+                <button class="btn btn-ghost" onclick="resetFilters()">Limpar Filtros</button>
+            </nav>
+        </aside>
+
+        <!-- Center Stage: Lista de Atletas -->
+        <section class="stage-center">
+            @if (Model != null && Model.Count > 0)
+            {
+                <div class="atletas-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Total de Atletas</span>
+                        <span class="stat-value">@Model.Count</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Modalidades</span>
+                        <span class="stat-value">@Model.Where(a => !string.IsNullOrEmpty(a.Modalidade)).Select(a => a.Modalidade).Distinct().Count()</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Homens</span>
+                        <span class="stat-value">@Model.Count(a => a.Sexo == 'M')</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Mulheres</span>
+                        <span class="stat-value">@Model.Count(a => a.Sexo == 'F')</span>
+                    </div>
+                </div>
+
+                <ul class="editorial-list atletas-list">
+                    @foreach (var atleta in Model)
+                    {
+                        <li class="editorial-list-item atleta-item" data-sexo="@atleta.Sexo" data-modalidade="@atleta.Modalidade">
+                            <div class="editorial-list-item-main">
+                                <h3 class="editorial-list-item-title">@atleta.NomeAtleta</h3>
+                                
+                                <div class="editorial-list-item-meta">
+                                    <span class="badge @(atleta.Sexo == 'M' ? "badge-blue" : "badge-gold")">
+                                        @(atleta.Sexo == 'M' ? "Masculino" : "Feminino")
+                                    </span>
+                                    @if (!string.IsNullOrEmpty(atleta.Modalidade))
+                                    {
+                                        <span class="badge">@atleta.Modalidade</span>
+                                    }
+                                </div>
+
+                                <div class="atleta-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Nascimento:</span>
+                                        <span class="detail-value">@atleta.DataNascimento</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Altura:</span>
+                                        <span class="detail-value">@atleta.Altura cm</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Peso:</span>
+                                        <span class="detail-value">@atleta.Peso kg</span>
+                                    </div>
+                                    @if (!string.IsNullOrEmpty(atleta.CidadeNascimento))
+                                    {
+                                        <div class="detail-item">
+                                            <span class="detail-label">Cidade:</span>
+                                            <span class="detail-value">@atleta.CidadeNascimento</span>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="editorial-list-item-action" style="display: flex; gap: 10px; align-items: center;">
+                                <a href="@Url.Action("Detalhes", "Atletas", new { id = atleta.CodAtleta })" class="btn btn-primary">Ver Perfil</a>
+                                
+                                @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+                                {
+                                    <a href="@Url.Action("Editar", "Atletas", new { id = atleta.CodAtleta })" class="btn btn-ghost" title="Editar Atleta">Editar</a>
+                                }
+                                
+                                @if (Context.Session.GetString("Role") == "Admin")
+                                {
+                                    <form asp-action="Excluir" asp-route-id="@atleta.CodAtleta" method="post" onsubmit="return confirm('Tem certeza que deseja excluir este atleta?');" style="display:inline;">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-ghost" style="color: var(--color-gold-emblem);">Excluir</button>
+                                    </form>
+                                }
+                            </div>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <div class="empty-state">
+                    <p class="empty-state-icon">📭</p>
+                    <p class="empty-state-text">Nenhum atleta cadastrado ainda.</p>
+                    @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+                    {
+                        <a href="@Url.Action("Criar", "Atletas")" class="btn btn-primary mt-lg">Cadastrar Primeiro Atleta</a>
+                    }
+                </div>
+            }
+        </section>
+
+        <!-- Right Insight: Estatísticas Avançadas -->
+        <aside class="insight-right">
+            @if (Model != null && Model.Count > 0)
+            {
+                <!-- Distribuição por Sexo -->
+                <article class="editorial-card">
+                    <h3 class="editorial-card-title">Distribuição por Sexo</h3>
+                    <ul class="ranking-list">
+                        <li class="ranking-item">
+                            <div class="ranking-position"></div>
+                            <div class="ranking-content">
+                                <div class="ranking-name">Masculino</div>
+                            </div>
+                            <div class="ranking-value">@Model.Count(a => a.Sexo == 'M')</div>
+                        </li>
+                        <li class="ranking-item">
+                            <div class="ranking-position"></div>
+                            <div class="ranking-content">
+                                <div class="ranking-name">Feminino</div>
+                            </div>
+                            <div class="ranking-value">@Model.Count(a => a.Sexo == 'F')</div>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Top Modalidades -->
+                <article class="editorial-card">
+                    <h3 class="editorial-card-title">Top Modalidades</h3>
+                    <ul class="ranking-list">
+                        @foreach (var modalidade in Model
+                            .Where(a => !string.IsNullOrEmpty(a.Modalidade))
+                            .GroupBy(a => a.Modalidade)
+                            .OrderByDescending(g => g.Count())
+                            .Take(5))
+                        {
+                            <li class="ranking-item">
+                                <div class="ranking-position"></div>
+                                <div class="ranking-content">
+                                    <div class="ranking-name">@modalidade.Key</div>
+                                </div>
+                                <div class="ranking-value">@modalidade.Count()</div>
+                            </li>
+                        }
+                    </ul>
+                </article>
+
+                <!-- Informações de Altura -->
+                <article class="editorial-card">
+                    <h3 class="editorial-card-title">Altura Média</h3>
+                    <div class="quick-fact">
+                        <div class="quick-fact-label">Todos os Atletas</div>
+                        <div class="quick-fact-value">
+                            @(Model.Where(a => a.Altura.HasValue).Average(a => a.Altura).GetValueOrDefault().ToString("F1")) <span class="quick-fact-unit">cm</span>
+                        </div>
+                    </div>
+                    <div class="quick-fact">
+                        <div class="quick-fact-label">Peso Médio</div>
+                        <div class="quick-fact-value">
+                            @(Model.Where(a => a.Peso.HasValue).Average(a => a.Peso).GetValueOrDefault().ToString("F1")) <span class="quick-fact-unit">kg</span>
+                        </div>
+                    </div>
+                </article>
+            }
+        </aside>
+    </div>
+</div>
+
+<style>
+    .atletas-page {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: var(--spacing-3xl);
+        padding-bottom: var(--spacing-xl);
+        border-bottom: 1px solid var(--color-gray-admin);
+        gap: var(--spacing-lg);
+    }
+
+    .page-header-content {
+        flex: 1;
+    }
+
+    .page-title {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-4xl);
+        font-weight: var(--font-weight-black);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-tight);
+        color: var(--color-black-editorial);
+        margin: 0 0 var(--spacing-sm) 0;
+    }
+
+    .page-subtitle {
+        font-size: var(--font-size-sm);
+        color: var(--color-gray-metadata);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-wide);
+        margin: 0;
+    }
+
+    .page-header .btn {
+        flex-shrink: 0;
+    }
+
+    .filters-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .sidebar-title {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-black);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-tight);
+        color: var(--color-black-editorial);
+        margin: 0;
+    }
+
+    .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .filter-label {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-bold);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-wide);
+        color: var(--color-black-editorial);
+    }
+
+    .filter-select {
+        padding: var(--spacing-md) 0;
+        border-bottom: 1px solid var(--color-gray-admin);
+    }
+
+    .atletas-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-2xl);
+        padding: var(--spacing-lg);
+        background-color: var(--color-gray-snow);
+        border-radius: var(--radius-md);
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .stat-label {
+        font-size: var(--font-size-xs);
+        font-weight: var(--font-weight-bold);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-wide);
+        color: var(--color-gray-metadata);
+    }
+
+    .stat-value {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-2xl);
+        font-weight: var(--font-weight-black);
+        color: var(--color-blue-abyssal);
+    }
+
+    .atletas-list {
+        margin-top: var(--spacing-2xl);
+    }
+
+    .atleta-item {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .atleta-details {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+    }
+
+    .detail-item {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    .detail-label {
+        font-size: var(--font-size-xs);
+        font-weight: var(--font-weight-bold);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-wide);
+        color: var(--color-gray-metadata);
+    }
+
+    .detail-value {
+        font-size: var(--font-size-sm);
+        color: var(--color-black-editorial);
+    }
+
+    .empty-state {
+        padding: var(--spacing-3xl);
+        background-color: var(--color-gray-snow);
+        border-radius: var(--radius-md);
+        text-align: center;
+    }
+
+    .empty-state-icon {
+        font-size: 3rem;
+        margin: 0 0 var(--spacing-md) 0;
+    }
+
+    .empty-state-text {
+        font-size: var(--font-size-base);
+        color: var(--color-gray-metadata);
+        margin: 0 0 var(--spacing-lg) 0;
+    }
+
+    @@media (max-width: 768px) {
+        .page-header {
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .atletas-stats {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
+
+<script>
+    function resetFilters() {
+        document.getElementById('filterSexo').value = '';
+        document.getElementById('filterModalidade').value = '';
+        applyFilters();
+    }
+
+    function applyFilters() {
+        const sexoFilter = document.getElementById('filterSexo').value;
+        const modalidadeFilter = document.getElementById('filterModalidade').value;
+        const items = document.querySelectorAll('.atleta-item');
+
+        items.forEach(item => {
+            const sexo = item.getAttribute('data-sexo');
+            const modalidade = item.getAttribute('data-modalidade');
+
+            const sexoMatch = !sexoFilter || sexo === sexoFilter;
+            const modalidadeMatch = !modalidadeFilter || modalidade === modalidadeFilter;
+
+            item.style.display = (sexoMatch && modalidadeMatch) ? '' : 'none';
+        });
+    }
+
+    document.getElementById('filterSexo').addEventListener('change', applyFilters);
+    document.getElementById('filterModalidade').addEventListener('change', applyFilters);
+</script>

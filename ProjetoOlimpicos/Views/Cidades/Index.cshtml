@@ -1,0 +1,52 @@
+﻿@model List<ProjetoOlimpicos.Models.Cidades>
+@{
+    ViewData["Title"] = "Cidades - Olympic Editorial";
+}
+
+<div class="page-header">
+    <div class="page-header-content">
+        <h1 class="page-title">Cidades</h1>
+        <p class="page-subtitle">Locais de origem dos atletas</p>
+    </div>
+    @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+    {
+        <a href="@Url.Action("Criar", "Cidades")" class="btn btn-primary">+ Nova Cidade</a>
+    }
+</div>
+
+<div class="editorial-grid">
+    <div class="stage-center" style="grid-column: span 12;">
+        <ul class="editorial-list">
+            @foreach (var cid in Model)
+            {
+                <li class="editorial-list-item">
+                    <div class="editorial-list-item-main">
+                        <h3 class="editorial-list-item-title">@cid.NomeCidade</h3>
+                        <div class="editorial-list-item-meta">
+                            <span class="text-metadata">Estado ID: @cid.CodEstado</span>
+                        </div>
+                    </div>
+                    <div class="editorial-list-item-action" style="display: flex; gap: 10px;">
+                        @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+                        {
+                            <a href="@Url.Action("Editar", "Cidades", new { id = cid.CodCidade })" class="btn btn-ghost">Editar</a>
+                        }
+                        @if (Context.Session.GetString("Role") == "Admin")
+                        {
+                            <form asp-action="Excluir" asp-route-id="@cid.CodCidade" method="post" onsubmit="return confirm('Excluir esta cidade?');">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-ghost" style="color: var(--color-gold-emblem);">Excluir</button>
+                            </form>
+                        }
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<style>
+    .page-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; border-bottom: 1px solid var(--color-gray-admin); padding-bottom: 20px; }
+    .page-title { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; text-transform: uppercase; color: var(--color-black-editorial); margin: 0; }
+    .page-subtitle { font-size: 0.8rem; color: var(--color-gray-metadata); text-transform: uppercase; letter-spacing: 2px; margin: 5px 0 0 0; }
+</style>

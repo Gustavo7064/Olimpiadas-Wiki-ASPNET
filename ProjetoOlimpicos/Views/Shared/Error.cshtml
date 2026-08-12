@@ -1,0 +1,29 @@
+@model ProjetoOlimpicos.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "Erro";
+}
+
+<div class="editorial-section">
+    <h1 class="text-danger section-title">Erro.</h1>
+    <h2 class="text-danger section-subtitle">Ocorreu um erro ao processar o seu pedido.</h2>
+
+    @if (Model.ShowRequestId)
+    {
+        <div class="editorial-card" style="border-left-color: var(--color-error);">
+            <p class="editorial-card-content">
+                <strong>ID do Pedido:</strong> <code>@Model.RequestId</code>
+            </p>
+        </div>
+    }
+
+    <div class="editorial-card mt-lg">
+        <h3 class="editorial-card-title">Modo de Desenvolvimento</h3>
+        <p class="editorial-card-content">
+            A mudança para o ambiente de <strong>Desenvolvimento</strong> apresentará informações mais detalhadas sobre o erro ocorrido.
+        </p>
+        <p class="editorial-card-content text-metadata">
+            <strong>O ambiente de Desenvolvimento não deve ser ativado para aplicações publicadas.</strong>
+            Pode resultar na exibição de informações sensíveis de exceções para os utilizadores finais.
+        </p>
+    </div>
+</div>

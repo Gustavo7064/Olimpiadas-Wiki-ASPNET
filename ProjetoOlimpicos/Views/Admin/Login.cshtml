@@ -1,0 +1,253 @@
+﻿@{
+    ViewBag.Title = "Login - Olympic Editorial Rebirth";
+    var returnUrl = ViewBag.ReturnUrl as string;
+}
+
+<div class="login-container">
+    <div class="login-wrapper">
+        <!-- Logo -->
+        <div class="login-header">
+            <div class="login-logo"></div>
+            <h1 class="login-title">Olympic Editorial</h1>
+            <p class="login-subtitle">Portal de Gestão Olímpica</p>
+        </div>
+
+        <!-- Formulário de Login -->
+        <form method="post" asp-action="Login" class="login-form">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="returnUrl" value="@returnUrl" />
+
+            <!-- Validação -->
+            @if (ViewBag.Erro != null)
+            {
+                <div class="alert alert-error">
+                    <span class="alert-icon">!</span>
+                    <span class="alert-text">@ViewBag.Erro</span>
+                </div>
+            }
+
+            <!-- Campo: Usuário -->
+            <div class="form-group">
+                <label class="form-label" for="username">Usuário</label>
+                <input 
+                    type="text" 
+                    id="username"
+                    name="username" 
+                    class="form-control" 
+                    placeholder="Digite seu usuário"
+                    required 
+                    autofocus />
+            </div>
+
+            <!-- Campo: Senha -->
+            <div class="form-group">
+                <label class="form-label" for="password">Senha</label>
+                <input 
+                    type="password" 
+                    id="password"
+                    name="password" 
+                    class="form-control" 
+                    placeholder="Digite sua senha"
+                    required />
+            </div>
+
+            <!-- Botão de Envio -->
+            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+            
+            <div class="login-footer">
+                <p>Não tem uma conta? <a href="@Url.Action("Registrar", "Admin")">Cadastre-se aqui</a></p>
+            </div>
+        </form>
+
+        <!-- Link para Novo Usuário -->
+        <div class="login-footer">
+            <p class="login-footer-text">
+                Não possui conta? 
+                <a href="@Url.Action("NovoUsuario", "Admin")" class="login-footer-link">Criar nova conta</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Decoração Editorial -->
+    <div class="login-decoration">
+        <div class="decoration-ring decoration-ring-1"></div>
+        <div class="decoration-ring decoration-ring-2"></div>
+        <div class="decoration-ring decoration-ring-3"></div>
+    </div>
+</div>
+
+<style>
+    /* Container Principal */
+    .login-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, var(--color-white-galactic) 0%, var(--color-gray-snow) 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Decoração de Fundo */
+    .login-decoration {
+        position: absolute;
+        top: 50%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        transform: translate(0, -50%);
+        pointer-events: none;
+    }
+
+    .decoration-ring {
+        position: absolute;
+        border: 1px solid var(--color-gray-admin);
+        border-radius: 50%;
+        opacity: 0.1;
+    }
+
+    .decoration-ring-1 {
+        width: 400px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .decoration-ring-2 {
+        width: 300px;
+        height: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .decoration-ring-3 {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Wrapper do Formulário */
+    .login-wrapper {
+        position: relative;
+        z-index: 10;
+        background-color: var(--color-white-galactic);
+        border: 1px solid var(--color-gray-admin);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-3xl);
+        width: 100%;
+        max-width: 420px;
+        box-shadow: var(--shadow-lg);
+    }
+
+    /* Header do Login */
+    .login-header {
+        text-align: center;
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .login-logo {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .login-title {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-2xl);
+        font-weight: var(--font-weight-black);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-tight);
+        color: var(--color-black-editorial);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .login-subtitle {
+        font-size: var(--font-size-sm);
+        color: var(--color-gray-metadata);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-wide);
+    }
+
+    /* Formulário */
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-xl);
+    }
+
+    /* Alertas */
+    .alert {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        border-left: 3px solid;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .alert-error {
+        background-color: #fee;
+        border-left-color: var(--color-error);
+    }
+
+    .alert-icon {
+        flex-shrink: 0;
+        font-size: 1.2em;
+    }
+
+    .alert-text {
+        font-size: var(--font-size-sm);
+        color: var(--color-black-editorial);
+    }
+
+    /* Botão Block */
+    .btn-block {
+        width: 100%;
+    }
+
+    /* Footer do Login */
+    .login-footer {
+        text-align: center;
+        padding-top: var(--spacing-lg);
+        border-top: 1px solid var(--color-gray-admin);
+    }
+
+    .login-footer-text {
+        margin: 0;
+        font-size: var(--font-size-sm);
+        color: var(--color-gray-metadata);
+    }
+
+    .login-footer-link {
+        color: var(--color-blue-abyssal);
+        font-weight: var(--font-weight-bold);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all var(--transition-base);
+    }
+
+    .login-footer-link:hover {
+        border-bottom-color: var(--color-blue-abyssal);
+    }
+
+    /* Responsividade */
+    @@media (max-width: 768px) {
+        .login-container {
+            padding: var(--spacing-lg);
+        }
+
+        .login-wrapper {
+            padding: var(--spacing-2xl);
+            max-width: 100%;
+        }
+
+        .login-decoration {
+            display: none;
+        }
+    }
+</style>

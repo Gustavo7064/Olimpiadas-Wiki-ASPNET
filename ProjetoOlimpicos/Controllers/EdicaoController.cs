@@ -1,0 +1,261 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using MySql.Data.MySqlClient;
+using ProjetoOlimpicos.Data;
+using ProjetoOlimpicos.Models;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using System.Data;
+using ProjetoOlimpicos.Filters;
+
+namespace ProjetoOlimpicos.Controllers
+{
+
+    [SessionAuthorize]  
+    public class EdicaoController : Controller
+    {
+        private readonly Database db = new Database();
+        public IActionResult Index()
+        {
+            List<Edicao> edicoes = new List<Edicao>();
+            using (MySqlConnection conn = db.GetConnection())
+            {   
+                string sql = "SELECT * FROM edicao";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        edicoes.Add(new Edicao
+                        {
+                            Codedicao = reader.GetInt32("codedicao"), // oq esta em aspas pega do banco
+                            Ano = reader.GetInt32("ano"),
+                            Sede = reader.GetString("sede")
+                        });
+                    }
+                }
+            }
+            return View(edicoes);
+
+        }
+
+
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Criar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Criar(Edicao edicao)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = @"INSERT INTO edicao (ano,sede)
+                     VALUES (@ano, @sede)";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@ano", edicao.Ano);
+                cmd.Parameters.AddWithValue("@sede", edicao.Sede);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(int id)
+        {
+            Edicao edicao = null;
+            using (var conn = db.GetConnection())
+            {
+                var sql = "SELECT * FROM edicao WHERE codedicao = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        edicao = new Edicao
+                        {
+                            Codedicao = reader.GetInt32("codedicao"),
+                            Ano = reader.GetInt32("ano"),
+                            Sede = reader.GetString("sede")
+                        };
+                    }
+                }
+            }
+            if (edicao == null) return NotFound();
+            return View(edicao);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [SessionAuthorize(RoleAnyOf = "Admin,Gerente")]
+        public IActionResult Editar(Edicao edicao)
+        {
+            using (var conn = db.GetConnection())
+            {
+                var sql = "UPDATE edicao SET ano=@ano, sede=@sede WHERE codedicao=@id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@ano", edicao.Ano);
+                cmd.Parameters.AddWithValue("@sede", edicao.Sede);
+                cmd.Parameters.AddWithValue("@id", edicao.Codedicao);
+                cmd.ExecuteNonQuery();
+            }
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [SessionAuthorize(RoleAnyOf = "Admin")]
+        public IActionResult Excluir(int id)
+        {
+            try
+            {
+                using (var conn = db.GetConnection())
+                {
+                    var sql = "DELETE FROM edicao WHERE codedicao = @id";
+                    var cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (MySqlException ex) when (ex.Number == 1451)
+            {
+                TempData["Erro"] = "Não é possível excluir esta edição pois existem resultados vinculados a ela.";
+            }
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Atletas(int id)
+        {
+            List<Atletas> atletas = new List<Atletas>();
+            int totalAtletas = 0;
+
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand("sp_GetAtletasByEdicao", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("p_edicao", id);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        atletas.Add(new Atletas
+                        {
+                            CodAtleta = reader.GetInt32(reader.GetOrdinal("codAtleta")),
+                            NomeAtleta = reader.IsDBNull(reader.GetOrdinal("nomeAtleta"))
+                                ? null
+                                : reader.GetString(reader.GetOrdinal("nomeAtleta")),
+                            DataNascimento = reader.IsDBNull(reader.GetOrdinal("dataNascimento"))
+                                ? null
+                                : reader.GetString(reader.GetOrdinal("dataNascimento")),
+                            Sexo = reader.IsDBNull(reader.GetOrdinal("sexo"))
+                                ? '\0'
+                                : reader.GetChar(reader.GetOrdinal("sexo")),
+                            CodCidade = reader.IsDBNull(reader.GetOrdinal("codCidade"))
+                                ? 0
+                                : reader.GetInt32(reader.GetOrdinal("codCidade")),
+                            CodModalidade = reader.IsDBNull(reader.GetOrdinal("codModalidade"))
+                                ? 0
+                                : reader.GetInt32(reader.GetOrdinal("codModalidade")),
+                            Modalidade = reader.IsDBNull(reader.GetOrdinal("nomeModalidade"))
+                                ? null
+                                : reader.GetString(reader.GetOrdinal("nomeModalidade"))
+                        });
+                    }
+                }
+
+                totalAtletas = atletas.Count;
+            }
+
+            ViewBag.EdicaoId = id;
+            ViewBag.TotalAtletas = totalAtletas;
+            return View(atletas);
+        }
+
+
+        public IActionResult Detalhes(int id)
+        {
+            Atletas atleta = null;
+            List<(string Prova, string Edicao, string Resultado, string Medalha)> participacoes = new();
+
+            using (var conn = db.GetConnection())
+            {
+string query = @"
+	         SELECT 
+	             a.codAtleta,a.nomeAtleta,a.dataNascimento,a.sexo,c.codCidade, c.nomeCidade,e.nomeEstado
+	                 FROM atletas a
+	                 LEFT JOIN cidades c ON c.codCidade = a.codCidade
+	                 LEFT JOIN estados e ON e.codEstado = c.codEstado
+	                 WHERE a.codAtleta = @id";
+
+                var cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        atleta = new Atletas
+                        {
+                            CodAtleta = reader.GetInt32("codAtleta"),
+                            NomeAtleta = reader.GetString("nomeAtleta"),
+                            DataNascimento = reader.GetString("dataNascimento"),
+                            Sexo = reader.GetChar("sexo"),
+                            CidadeNascimento = reader.GetString("nomeCidade"),
+                            EstadoNascimento = reader.GetString("nomeEstado"),
+                            CodCidade = reader.GetInt32("codCidade")
+                        };
+                    }
+                }
+
+                // Buscar participações
+                string participacaoQuery = @"
+     SELECT p.Prova, e.ano, e.sede, r.resultado, r.medalha
+     FROM resultadosatletas r
+     JOIN provas p ON p.codProva = r.codProva
+     JOIN edicao e ON e.codedicao = r.edicao
+     WHERE r.codAtleta = @id";
+
+                var cmd2 = new MySqlCommand(participacaoQuery, conn);
+                cmd2.Parameters.AddWithValue("@id", id);
+                using (var reader = cmd2.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        participacoes.Add((
+                            reader.IsDBNull(reader.GetOrdinal("Prova"))
+                                ? null
+                                : reader.GetString(reader.GetOrdinal("Prova")),
+
+                            $"{(reader.IsDBNull(reader.GetOrdinal("ano"))
+                                ? "?"
+                                : reader.GetInt32(reader.GetOrdinal("ano")).ToString())} - {(reader.IsDBNull(reader.GetOrdinal("sede"))
+                                ? "?"
+                                : reader.GetString(reader.GetOrdinal("sede")))}",
+
+                            reader.IsDBNull(reader.GetOrdinal("resultado"))
+                                ? null
+                                : reader.GetString(reader.GetOrdinal("resultado")),
+
+                            reader.IsDBNull(reader.GetOrdinal("medalha"))
+                                ? null
+                                : reader.GetString(reader.GetOrdinal("medalha"))
+                        ));
+                    }
+
+                }
+            }
+
+            ViewBag.Participacoes = participacoes ?? new List<(string Prova, string Edicao, string Resultado, string Medalha)>();
+            return View(atleta);
+        }
+
+
+    }
+}
+ 
+
+    

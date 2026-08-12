@@ -1,0 +1,319 @@
+﻿@{
+    ViewData["Title"] = "Home - Olympic Editorial Rebirth";
+    var edicoes = ViewBag.Edicoes as List<ProjetoOlimpicos.Models.Edicao> ?? new List<ProjetoOlimpicos.Models.Edicao>();
+    var atletasDestaque = ViewBag.AtletasDestaque as List<ProjetoOlimpicos.Models.Atletas> ?? new List<ProjetoOlimpicos.Models.Atletas>();
+    var estatisticas = ViewBag.Estatisticas as Dictionary<string, int> ?? new Dictionary<string, int>();
+}
+
+<!-- WATERMARK DE FUNDO -->
+<div class="watermark" data-text="OLYMPIC GAMES">
+    <!-- Arquitetura Editorial de 3 Colunas -->
+    <div class="editorial-grid">
+        
+        <!-- LEFT RAIL: NAVEGAÇÃO CONTEXTUAL -->
+        <aside class="rail-left">
+            <nav class="editorial-nav">
+                <h3 class="nav-title">Navegação</h3>
+                
+                <ul class="nav-list">
+                    <li><a href="@Url.Action("Index", "Edicao")" class="nav-item">Edições Olímpicas</a></li>
+                    <li><a href="@Url.Action("Index", "Atletas")" class="nav-item">Atletas Destaque</a></li>
+                    <li><a href="@Url.Action("Index", "Provas")" class="nav-item">Provas e Modalidades</a></li>
+                </ul>
+
+                <hr class="divider" />
+
+                <!-- Quick Stats -->
+                <div class="quick-facts-sidebar">
+                    <h4 class="sidebar-title">Estatísticas Globais</h4>
+                    
+                    @if (estatisticas.Count > 0)
+                    {
+                        <div class="quick-fact">
+                            <div class="quick-fact-label">Total de Edições</div>
+                            <div class="quick-fact-value">@(estatisticas.ContainsKey("edicoes") ? estatisticas["edicoes"] : 0)</div>
+                        </div>
+                        
+                        <div class="quick-fact">
+                            <div class="quick-fact-label">Atletas Cadastrados</div>
+                            <div class="quick-fact-value">@(estatisticas.ContainsKey("atletas") ? estatisticas["atletas"] : 0)</div>
+                        </div>
+                        
+                        <div class="quick-fact">
+                            <div class="quick-fact-label">Provas Registradas</div>
+                            <div class="quick-fact-value">@(estatisticas.ContainsKey("provas") ? estatisticas["provas"] : 0)</div>
+                        </div>
+                    }
+                </div>
+            </nav>
+        </aside>
+
+        <!-- CENTER STAGE: CONTEÚDO IMERSIVO -->
+        <section class="stage-center">
+            
+            <!-- Hero Principal -->
+            <article class="editorial-hero">
+                <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1200&h=400&fit=crop" 
+                     alt="Olympic Games" 
+                     class="editorial-hero-image" />
+                <div class="editorial-hero-overlay"></div>
+                <div class="editorial-hero-content">
+                    <h1 class="editorial-hero-title">Bem-vindo ao Portal Olímpico</h1>
+                    <div class="editorial-hero-meta">
+                        <span class="badge badge-gold">Edição 2024</span>
+                        <span class="badge badge-blue">Paris</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Seção: Últimas Edições -->
+            <section class="editorial-section">
+                <h2 class="section-title">Edições Recentes</h2>
+                <p class="section-subtitle">Explore as Olimpíadas mais recentes e seus destaques</p>
+
+                @if (edicoes.Count > 0)
+                {
+                    <ul class="editorial-list">
+                        @foreach (var edicao in edicoes.OrderByDescending(e => e.Ano).Take(5))
+                        {
+                            <li class="editorial-list-item">
+                                <div class="editorial-list-item-main">
+                                    <h3 class="editorial-list-item-title">
+                                        <a href="@Url.Action("Index", "Edicao")">Olimpíadas @edicao.Ano</a>
+                                    </h3>
+                                    <div class="editorial-list-item-meta">
+                                        <span class="badge">@edicao.Sede</span>
+                                        <span class="text-metadata">Ano: @edicao.Ano</span>
+                                    </div>
+                                    <p class="editorial-list-item-description">
+                                        Confira todos os atletas, provas e resultados da edição de @edicao.Ano em @edicao.Sede.
+                                    </p>
+                                </div>
+                                <div class="editorial-list-item-action">
+                                    <a href="@Url.Action("Atletas", "Edicao", new { id = edicao.Codedicao })" 
+                                       class="btn btn-primary">Explorar Edição</a>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <div class="empty-state">
+                        <p class="text-metadata">Nenhuma edição cadastrada ainda.</p>
+                        @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+                        {
+                            <a href="@Url.Action("Criar", "Edicao")" class="btn btn-primary mt-lg">Cadastrar Edição</a>
+                        }
+                    </div>
+                }
+            </section>
+
+            <!-- Seção: Atletas em Destaque -->
+            <section class="editorial-section">
+                <h2 class="section-title">Atletas em Destaque</h2>
+                <p class="section-subtitle">Conheça os principais competidores do portal</p>
+
+                @if (atletasDestaque.Count > 0)
+                {
+                    <ul class="editorial-list">
+                        @foreach (var atleta in atletasDestaque.Take(5))
+                        {
+                            <li class="editorial-list-item">
+                                <div class="editorial-list-item-main">
+                                    <h3 class="editorial-list-item-title">@atleta.NomeAtleta</h3>
+                                    <div class="editorial-list-item-meta">
+                                        <span class="badge badge-blue">@atleta.Sexo</span>
+                                        <span class="text-metadata">Nascimento: @atleta.DataNascimento</span>
+                                    </div>
+                                    <p class="editorial-list-item-description">
+                                        Altura: @atleta.Altura cm | Peso: @atleta.Peso kg | 
+                                        @if (!string.IsNullOrEmpty(atleta.Modalidade))
+                                        {
+                                            <span>Modalidade: @atleta.Modalidade</span>
+                                        }
+                                    </p>
+                                </div>
+                                <div class="editorial-list-item-action">
+                                    <a href="@Url.Action("Index", "Atletas")" class="btn btn-ghost">Ver Perfil</a>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <div class="empty-state">
+                        <p class="text-metadata">Nenhum atleta cadastrado ainda.</p>
+                        @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+                        {
+                            <a href="@Url.Action("Criar", "Atletas")" class="btn btn-primary mt-lg">Cadastrar Atleta</a>
+                        }
+                    </div>
+                }
+            </section>
+        </section>
+
+        <!-- RIGHT INSIGHT: DADOS DENSOS -->
+        <aside class="insight-right">
+            
+            <!-- Ranking de Edições -->
+            <article class="editorial-card">
+                <h3 class="editorial-card-title">Edições por Ano</h3>
+                
+                @if (edicoes.Count > 0)
+                {
+                    <ul class="ranking-list">
+                        @foreach (var edicao in edicoes.OrderByDescending(e => e.Ano).Take(5))
+                        {
+                            <li class="ranking-item">
+                                <div class="ranking-position">@edicao.Ano.ToString().Substring(2)</div>
+                                <div class="ranking-content">
+                                    <div class="ranking-name">@edicao.Ano</div>
+                                    <div class="ranking-meta">@edicao.Sede</div>
+                                </div>
+                                <div class="ranking-value">
+                                    <a href="@Url.Action("Atletas", "Edicao", new { id = edicao.Codedicao })">→</a>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                }
+            </article>
+
+            <!-- Distribuição por Década -->
+            <article class="editorial-card">
+                <h3 class="editorial-card-title">Edições por Década</h3>
+                @if (edicoes.Count > 0)
+                {
+                    <ul class="ranking-list">
+                        @foreach (var grupo in edicoes.GroupBy(e => (e.Ano / 10) * 10).OrderByDescending(g => g.Key))
+                        {
+                            <li class="ranking-item">
+                                <div class="ranking-position">@grupo.Key.ToString().Substring(2)s</div>
+                                <div class="ranking-content">
+                                    <div class="ranking-name">Anos @grupo.Key-@(grupo.Key + 9)</div>
+                                </div>
+                                <div class="ranking-value">@grupo.Count()</div>
+                            </li>
+                        }
+                    </ul>
+                }
+            </article>
+
+            <!-- Informações do Sistema -->
+            <article class="editorial-card">
+                <h3 class="editorial-card-title">Sobre o Portal</h3>
+                <p class="editorial-card-content">
+                    Portal Editorial Olímpico com arquitetura de informação de elite, 
+                    densidade de dados estratégica e estética de prestígio global.
+                </p>
+                <div class="editorial-card-meta">
+                    <span class="badge badge-gold">v1.0</span>
+                    <span class="badge">2026</span>
+                </div>
+            </article>
+
+            <!-- Ações Rápidas (se Admin ou Gerente) -->
+            @if (Context.Session.GetString("Role") == "Admin" || Context.Session.GetString("Role") == "Gerente")
+            {
+                <article class="editorial-card">
+                    <h3 class="editorial-card-title">Ações Rápidas</h3>
+                    <div class="quick-actions">
+                        <a href="@Url.Action("Criar", "Edicao")" class="btn btn-primary mb-md">Nova Edição</a>
+                        <a href="@Url.Action("Criar", "Atletas")" class="btn btn-primary mb-md">Novo Atleta</a>
+                        <a href="@Url.Action("Criar", "Provas")" class="btn btn-primary">Nova Prova</a>
+                    </div>
+                </article>
+            }
+        </aside>
+    </div>
+</div>
+
+<style>
+    .editorial-section {
+        margin-bottom: var(--spacing-3xl);
+    }
+
+    .section-title {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-3xl);
+        font-weight: var(--font-weight-black);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-tight);
+        color: var(--color-black-editorial);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-size-base);
+        color: var(--color-gray-metadata);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .nav-title {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-black);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-tight);
+        color: var(--color-black-editorial);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .nav-item {
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-bold);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-wide);
+        color: var(--color-black-editorial);
+        padding-bottom: var(--spacing-sm);
+        border-bottom: 1px solid transparent;
+        transition: all var(--transition-base);
+    }
+
+    .nav-item:hover {
+        color: var(--color-blue-abyssal);
+        border-bottom-color: var(--color-blue-abyssal);
+    }
+
+    .sidebar-title {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-md);
+        font-weight: var(--font-weight-black);
+        text-transform: uppercase;
+        letter-spacing: var(--letter-spacing-tight);
+        color: var(--color-black-editorial);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .quick-facts-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .empty-state {
+        padding: var(--spacing-2xl);
+        background-color: var(--color-gray-snow);
+        border-radius: var(--radius-md);
+        text-align: center;
+    }
+
+    .quick-actions {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .quick-actions .btn {
+        width: 100%;
+    }
+</style>
