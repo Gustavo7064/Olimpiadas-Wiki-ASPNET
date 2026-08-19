@@ -196,7 +196,7 @@ Como possibilidades de evolução, o projeto pode receber uma API REST, filtros 
 
 ## Licença
 
-Este projeto pode ser utilizado e adaptado conforme a licença definida pelo autor ou pelo repositório de origem. Caso ainda não exista uma licença, recomenda-se adicionar um arquivo `LICENSE` antes da publicação pública.
+Este projeto pode ser utilizado e adaptado.
 
 ---
 
